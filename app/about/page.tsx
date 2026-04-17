@@ -1,0 +1,144 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Jake Trerotola and the Best Hotels team have reviewed 200+ hotels across 60+ countries, building an audience of 700K+ travelers.',
+}
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* HERO */}
+      <section
+        className="page-hero"
+        style={{
+          height: 500,
+          backgroundImage: "url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=2000&q=85&auto=format&fit=crop')",
+          backgroundSize: 'cover', backgroundPosition: 'center 40%',
+        }}
+      >
+        <div className="page-hero-content">
+          <p className="page-eyebrow">Our Story</p>
+          <h1 className="page-title">About <em>Best Hotels</em></h1>
+        </div>
+      </section>
+
+      {/* MISSION */}
+      <section className="mission">
+        <div className="mission-text">
+          <div className="mission-eyebrow">Our Mission</div>
+          <h2 className="mission-heading">Discovering the World&apos;s <em>Most Extraordinary Stays</em></h2>
+          <div className="mission-body">
+            <p>Best Hotels was built on a simple belief: that the right hotel can transform a trip from a holiday into a memory that lasts a lifetime. We travel to the world&apos;s most remarkable properties, document them with drone footage and editorial photography, and share firsthand reviews with our global community.</p>
+            <p>We don&apos;t accept payment for coverage. Every review is based on an unsponsored stay. Our audience trusts us because we trust them with honesty.</p>
+          </div>
+        </div>
+        <div
+          className="mission-photo"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=85&auto=format&fit=crop')" }}
+        />
+      </section>
+
+      {/* STATS */}
+      <section className="stats-row">
+        {[
+          { num: '700K+', label: 'Global Audience', desc: 'Across Instagram, YouTube, and editorial' },
+          { num: '200+', label: 'Hotels Reviewed', desc: 'Firsthand stays, no paid coverage' },
+          { num: '60+', label: 'Countries', desc: 'From the Red Sea to Patagonia' },
+          { num: '5+', label: 'Years', desc: 'Of consistent editorial publishing' },
+        ].map(({ num, label, desc }) => (
+          <div key={label} className="stat-item">
+            <div className="stat-num">{num}</div>
+            <div className="stat-label">{label}</div>
+            <div className="stat-desc">{desc}</div>
+          </div>
+        ))}
+      </section>
+
+      {/* FOUNDER */}
+      <div style={{ padding: '4rem 3rem 0' }}>
+        <div style={{ fontSize: '0.68rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.8rem' }}>The Team</div>
+        <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 300 }}>The People Behind <em>Best Hotels</em></h2>
+      </div>
+
+      {/* JEREMY */}
+      <section className="founder">
+        <div
+          className="founder-photo"
+          style={{ backgroundImage: "url('/images/jeremy-kaminsky.png')", backgroundSize: 'cover', backgroundPosition: 'center top' }}
+        />
+        <div className="founder-content">
+          <div className="founder-eyebrow">Owner &amp; President</div>
+          <div className="founder-name">Jeremy Kaminsky</div>
+          <div className="founder-title">Owner &amp; President of Best Hotels</div>
+          <blockquote className="founder-quote">
+            &quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;
+          </blockquote>
+          <div className="founder-bio">
+            <p>Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication. Jeremy&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* JAKE */}
+      <section className="founder founder--inverted" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div
+          className="founder-photo"
+          style={{ backgroundImage: "url('/images/jake-trerotola.png')", backgroundSize: 'cover', backgroundPosition: 'center top' }}
+        />
+        <div className="founder-content">
+          <div className="founder-eyebrow">Founder &amp; Creative Director</div>
+          <div className="founder-name">Jake Trerotola</div>
+          <div className="founder-title">Founder of Best Hotels</div>
+          <blockquote className="founder-quote">
+            &quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;
+          </blockquote>
+          <div className="founder-bio">
+            <p>Jake has spent the past five years traveling to extraordinary properties across six continents, building one of the most trusted luxury hotel editorial platforms in the world. His work has been featured in Axios, Condé Nast Traveler, and HuffPost.</p>
+            <p>He is based between New York and wherever the next great hotel is.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* THREE PILLARS */}
+      <section style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ padding: '5rem 3rem 0' }}>
+          <div style={{ fontSize: '0.68rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.8rem' }}>What We Do</div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 300 }}>Three Pillars of <em>Best Hotels</em></h2>
+        </div>
+        <div className="pillars">
+          <div className="pillar">
+            <div className="pillar-icon">◈</div>
+            <div className="pillar-label">Visual</div>
+            <h3 className="pillar-title">Drone <em>Footage</em></h3>
+            <p className="pillar-text">We capture hotels from perspectives most guests never see — aerial drone footage that reveals the full scale, setting, and beauty of each property.</p>
+          </div>
+          <div className="pillar">
+            <div className="pillar-icon">◆</div>
+            <div className="pillar-label">Visual</div>
+            <h3 className="pillar-title">Editorial <em>Photography</em></h3>
+            <p className="pillar-text">Every room, pool, restaurant, and view — documented with the care and quality that luxury properties deserve. Photography that makes you want to be there.</p>
+          </div>
+          <div className="pillar">
+            <div className="pillar-icon">◇</div>
+            <div className="pillar-label">Editorial</div>
+            <h3 className="pillar-title">Written <em>Reviews</em></h3>
+            <p className="pillar-text">Honest, detailed, firsthand reviews from actual stays. We cover everything: service, food, design, value, and what makes each property truly worth visiting.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* PRESS */}
+      <section className="press-section">
+        <p className="press-label">As Seen In</p>
+        <div className="press-logos">
+          <span className="press-logo">Axios</span>
+          <span className="press-logo" style={{ fontSize: '1.1rem', lineHeight: '1.25' }}>
+            Condé Nast<br /><span style={{ fontStyle: 'normal', fontSize: '0.7em', letterSpacing: '0.14em' }}>Traveler</span>
+          </span>
+          <span className="press-logo ss">HuffPost</span>
+        </div>
+      </section>
+    </>
+  )
+}
