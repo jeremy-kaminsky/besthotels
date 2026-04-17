@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { client } from '@/sanity/client'
 import { ALL_REVIEWS_QUERY } from '@/sanity/queries/reviews'
 import NewsletterForm from '@/components/NewsletterForm'
@@ -119,10 +120,9 @@ export default async function HomePage() {
 
       {/* ABOUT */}
       <section className="about-strip" id="about">
-        <div
-          className="about-photo"
-          style={{ backgroundImage: "url('/images/jeremy-kaminsky.png')", backgroundPosition: 'center top' }}
-        />
+        <div className="about-photo" style={{ position: 'relative', overflow: 'hidden' }}>
+          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
+        </div>
         <div className="about-content">
           <p className="section-eyebrow">Leadership</p>
           <blockquote className="about-quote">&quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;</blockquote>

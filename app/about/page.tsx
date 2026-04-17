@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -63,10 +64,9 @@ export default function AboutPage() {
 
       {/* JEREMY */}
       <section className="founder">
-        <div
-          className="founder-photo"
-          style={{ backgroundImage: "url('/images/jeremy-kaminsky.png')", backgroundSize: 'cover', backgroundPosition: 'center top' }}
-        />
+        <div className="founder-photo" style={{ position: 'relative', overflow: 'hidden' }}>
+          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
+        </div>
         <div className="founder-content">
           <div className="founder-eyebrow">Owner &amp; President</div>
           <div className="founder-name">Jeremy Kaminsky</div>
