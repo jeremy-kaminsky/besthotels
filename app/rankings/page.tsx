@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { client } from '@/sanity/client'
 import { ALL_RANKING_LISTS_QUERY, RANKING_ENTRIES_BY_LIST_QUERY } from '@/sanity/queries/rankings'
 import { ALL_FILTER_OPTIONS_QUERY } from '@/sanity/queries/reviews'
@@ -63,14 +64,16 @@ export default async function RankingsPage() {
         </div>
       </section>
 
-      <RankingsClient
-        lists={lists}
-        entriesByList={entriesByList}
-        countries={filterOptions.countries}
-        states={filterOptions.states}
-        cities={filterOptions.cities}
-        experiences={filterOptions.experiences}
-      />
+      <Suspense fallback={null}>
+        <RankingsClient
+          lists={lists}
+          entriesByList={entriesByList}
+          countries={filterOptions.countries}
+          states={filterOptions.states}
+          cities={filterOptions.cities}
+          experiences={filterOptions.experiences}
+        />
+      </Suspense>
     </>
   )
 }
