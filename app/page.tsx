@@ -121,7 +121,7 @@ export default async function HomePage() {
       {/* ABOUT */}
       <section className="about-strip" id="about">
         <div className="about-photo" style={{ position: 'relative', overflow: 'hidden' }}>
-          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
+          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
         </div>
         <div className="about-content">
           <p className="section-eyebrow">Leadership</p>

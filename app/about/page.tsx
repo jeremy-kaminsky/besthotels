@@ -65,7 +65,7 @@ export default function AboutPage() {
       {/* JEREMY */}
       <section className="founder">
         <div className="founder-photo" style={{ position: 'relative', overflow: 'hidden' }}>
-          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
+          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
         </div>
         <div className="founder-content">
           <div className="founder-eyebrow">Owner &amp; President</div>
