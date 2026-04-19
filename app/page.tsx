@@ -60,17 +60,17 @@ export default async function HomePage() {
         <div className="hero-right">
           <div
             className="hero-img-main"
-            style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/Shebara-Resort-Futuristic-Luxury.jpg')" }}
+            style={{ backgroundImage: "url('https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2024/06/27/0835/MARPH-P0229-Restaurant-Pavillon-Terrace-Pool-Pergolas-Tables-Vegetation.jpg/MARPH-P0229-Restaurant-Pavillon-Terrace-Pool-Pergolas-Tables-Vegetation.16x9.jpg?imwidth=1920')" }}
           >
             <div className="photo-overlay" />
           </div>
           <div className="hero-img-split">
-            <div style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/luxury-overwater-villa-Red-Sea-private-pool-Shebara-resort.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-            <div style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/Shebara-resort-ocean-view-turquoise-water-Red-Sea-edited.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ backgroundImage: "url('https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2023/11/30/1141/MARPH-P0099-Park-Suite-King-Deluxe-Room.jpg/MARPH-P0099-Park-Suite-King-Deluxe-Room.16x9.jpg?imwidth=1920')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ backgroundImage: "url('https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2024/12/10/0450/MARPH-P0235-Entrance-Woman-Lobby-Check-In.jpg/MARPH-P0235-Entrance-Woman-Lobby-Check-In.16x9.jpg?imwidth=1920')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-num">Red Sea</div>
-            <div className="hero-stat-label">Featured · Shebara Resort</div>
+            <div className="hero-stat-num">Marrakech</div>
+            <div className="hero-stat-label">Featured · Park Hyatt Marrakech</div>
           </div>
         </div>
       </section>
