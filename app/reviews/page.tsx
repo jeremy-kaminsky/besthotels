@@ -43,7 +43,7 @@ export default async function ReviewsPage() {
           priority
           quality={90}
           sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
+          style={{ objectFit: 'cover', objectPosition: 'center top' }}
         />
         <div className="page-hero-content">
           <p className="page-eyebrow fu">Aminess Laurel Khalani · Makarska, Croatia</p>
