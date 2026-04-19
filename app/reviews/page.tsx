@@ -35,9 +35,9 @@ export default async function ReviewsPage() {
         className="page-hero"
         style={{
           height: 420,
-          backgroundImage: "url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=2000&q=85&auto=format&fit=crop')",
+          backgroundImage: "url('/images/reviews-hero.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 60%',
         }}
       >
         <div className="page-hero-content">
