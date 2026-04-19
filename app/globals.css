@@ -376,7 +376,7 @@ footer {
 .entry-name { font-family: var(--serif); font-size: clamp(1.3rem, 1.8vw, 1.7rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 0.4rem; transition: color 0.2s; }
 .entry-location { font-size: 0.76rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
 .entry-location::before { content: ''; display: inline-block; width: 14px; height: 1px; background: var(--gold-dark); }
-.entry-excerpt { font-size: 1.02rem; line-height: 1.9; color: rgba(255,255,255,0.82); margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.entry-excerpt { font-size: 1.02rem; line-height: 1.9; color: rgba(255,255,255,0.82); margin-bottom: 1rem; }
 .entry-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
 .entry-tag { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); padding: 0.22rem 0.55rem; }
 .entry-read { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold-dark); padding-bottom: 0.2rem; cursor: pointer; }

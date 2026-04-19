@@ -60,7 +60,7 @@ export default async function HomePage() {
         <div className="hero-right">
           <div
             className="hero-img-main"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=85&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1400&q=85&auto=format&fit=crop')" }}
           >
             <div className="photo-overlay" />
           </div>
@@ -69,8 +69,8 @@ export default async function HomePage() {
             <div style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-num">Maldives</div>
-            <div className="hero-stat-label">Featured · Gili Lankanfushi</div>
+            <div className="hero-stat-num">Marrakech</div>
+            <div className="hero-stat-label">Featured · Park Hyatt Marrakech</div>
           </div>
         </div>
       </section>

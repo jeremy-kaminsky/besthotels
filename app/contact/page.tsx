@@ -17,8 +17,8 @@ export default function ContactPage() {
         className="page-hero"
         style={{
           height: 420,
-          backgroundImage: "url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=2000&q=85&auto=format&fit=crop')",
-          backgroundSize: 'cover', backgroundPosition: 'center 55%',
+          backgroundImage: "url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=2000&q=85&auto=format&fit=crop')",
+          backgroundSize: 'cover', backgroundPosition: 'center 40%',
         }}
       >
         <div className="page-hero-content">
