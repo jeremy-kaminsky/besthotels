@@ -75,15 +75,17 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TICKER */}
-      <div className="divider">
-        {['Bali · Indonesia', 'Santorini · Greece', 'Maldives · Indian Ocean', 'Amalfi Coast · Italy', 'Kyoto · Japan', 'Marrakech · Morocco', 'Cape Town · South Africa', 'Patagonia · Argentina'].map((item) => (
-          <div key={item} className="div-item">
-            <div className="div-dot" />
-            <span className="div-text">{item}</span>
-          </div>
-        ))}
-      </div>
+      {/* PRESS */}
+      <section className="press-section" style={{ padding: '3rem 3rem 2.5rem' }}>
+        <p className="press-label">As Seen In</p>
+        <div className="press-logos">
+          <span className="press-logo">Axios</span>
+          <span className="press-logo" style={{ fontSize: '1.1rem', lineHeight: '1.25' }}>
+            Condé Nast<br /><span style={{ fontStyle: 'normal', fontSize: '0.7em', letterSpacing: '0.14em' }}>Traveler</span>
+          </span>
+          <span className="press-logo ss">HuffPost</span>
+        </div>
+      </section>
 
       {/* FEATURED STAYS */}
       <section id="stays">
@@ -100,7 +102,6 @@ export default async function HomePage() {
               key={i}
               className="stay-card"
               style={{ backgroundImage: `url('${card.img}')` }}
-              onClick={card.slug ? undefined : undefined}
             >
               {card.slug ? (
                 <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
@@ -115,20 +116,15 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div className="section-divider" style={{ margin: '0' }} />
-
-      {/* PRESS */}
-      <section className="press-section" style={{ padding: '3rem 3rem 2.5rem' }}>
-        <p className="press-label">As Seen In</p>
-        <div className="press-logos">
-          <span className="press-logo">Axios</span>
-          <span className="press-logo" style={{ fontSize: '1.1rem', lineHeight: '1.25' }}>
-            Condé Nast<br /><span style={{ fontStyle: 'normal', fontSize: '0.7em', letterSpacing: '0.14em' }}>Traveler</span>
-          </span>
-          <span className="press-logo ss">HuffPost</span>
-        </div>
-      </section>
+      {/* TICKER */}
+      <div className="divider">
+        {['Bali · Indonesia', 'Santorini · Greece', 'Maldives · Indian Ocean', 'Amalfi Coast · Italy', 'Kyoto · Japan', 'Marrakech · Morocco', 'Cape Town · South Africa', 'Patagonia · Argentina'].map((item) => (
+          <div key={item} className="div-item">
+            <div className="div-dot" />
+            <span className="div-text">{item}</span>
+          </div>
+        ))}
+      </div>
 
       {/* GOLD DIVIDER */}
       <div style={{ margin: '0 3rem', height: '1px', background: 'rgba(201,169,110,0.15)' }} />
