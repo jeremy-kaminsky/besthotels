@@ -587,12 +587,12 @@ footer {
 .about-sig-name { font-family: var(--serif); font-size: 1.02rem; font-style: italic; color: var(--gold); }
 .about-sig-role { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; }
 
-.press-section { padding: 4rem 3rem; border-top: 1px solid rgba(201,169,110,0.08); border-bottom: 1px solid rgba(201,169,110,0.08); text-align: center; }
-.press-label { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin-bottom: 2.5rem; }
+.press-section { padding: 3rem 3rem; border-top: 1px solid rgba(201,169,110,0.08); border-bottom: 1px solid rgba(201,169,110,0.08); text-align: center; }
+.press-label { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: #C9A96E; margin-bottom: 2.5rem; }
 .press-logos { display: flex; align-items: center; justify-content: center; gap: 4.5rem; flex-wrap: wrap; }
-.press-logo { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: rgba(255,255,255,0.85); letter-spacing: 0.04em; transition: color 0.3s; font-style: italic; cursor: default; }
+.press-logo { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: rgba(250,250,247,0.9); letter-spacing: 0.04em; transition: color 0.3s; font-style: italic; cursor: default; }
 .press-logo.ss { font-family: var(--sans); font-style: normal; font-size: 0.9rem; letter-spacing: 0.18em; font-weight: 600; }
-.press-logo:hover { color: rgba(201,169,110,0.5); }
+.press-logo:hover { color: rgba(201,169,110,0.6); }
 
 /* ═══════════════════ ABOUT PAGE ═══════════════════ */
 .mission { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
@@ -686,16 +686,17 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   nav { padding: 1rem 1.2rem; flex-wrap: wrap; gap: 0.6rem; }
   .nav-logo { font-size: 1rem; letter-spacing: 0.14em; }
   .nav-links { gap: 1rem; flex-wrap: wrap; }
-  .nav-links a { font-size: 0.55rem; letter-spacing: 0.16em; }
+  .nav-links a { font-size: 0.75rem; letter-spacing: 0.18em; }
 
   .page-hero { padding: 2rem 1.2rem; height: auto; min-height: 320px; }
   .page-title { font-size: 2rem; line-height: 1.1; }
   .hero { grid-template-columns: 1fr; max-height: none; }
-  .hero-right { display: grid; height: 320px; order: -1; grid-template-rows: 100%; }
+  .hero-right { display: grid; height: 320px; max-height: 320px; order: -1; grid-template-rows: 100%; }
   .hero-img-main { grid-row: auto; }
   .hero-img-split { display: none; }
   .hero-stat { display: none; }
-  .hero-left { padding: 3rem 1.5rem; }
+  .hero-left { padding: 2rem 1.5rem; }
+  .hero-left::before { display: none; }
 
   .stays-grid { grid-template-columns: 1fr; }
   .stay-card { height: 280px; }
@@ -781,7 +782,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 
 @media (max-width: 480px) {
   nav { padding: 0.8rem 1rem; }
-  .nav-links a { font-size: 0.5rem; letter-spacing: 0.12em; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.15em; }
   .page-title { font-size: 1.7rem; }
   .stats-row { grid-template-columns: 1fr; }
   .stat-item { border-right: none; }
