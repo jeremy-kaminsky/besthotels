@@ -1,17 +1,15 @@
 import { countrySchema } from './country'
-import { stateSchema } from './state'
+import { regionSchema } from './region'
 import { citySchema } from './city'
-import { experienceSchema } from './experience'
+import { hotelSchema } from './hotel'
+import { rankingSchema } from './ranking'
 import { reviewSchema } from './review'
-import { rankingListSchema } from './rankingList'
-import { rankingEntrySchema } from './rankingEntry'
 
 export const schemaTypes = [
   countrySchema,
-  stateSchema,
+  regionSchema,
   citySchema,
-  experienceSchema,
+  hotelSchema,
+  rankingSchema,
   reviewSchema,
-  rankingListSchema,
-  rankingEntrySchema,
 ]

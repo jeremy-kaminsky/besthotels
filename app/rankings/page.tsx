@@ -1,48 +1,24 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { client } from '@/sanity/client'
-import { ALL_RANKING_LISTS_QUERY, RANKING_ENTRIES_BY_LIST_QUERY } from '@/sanity/queries/rankings'
-import { ALL_FILTER_OPTIONS_QUERY } from '@/sanity/queries/reviews'
+import { RANKINGS_INDEX_QUERY } from '@/sanity/queries/rankings'
 import RankingsClient from './RankingsClient'
 
 export const metadata: Metadata = {
   title: 'Hotel Rankings',
-  description: 'Our definitive editorial rankings across every category — from beach resorts to ski lodges, safari camps to city hotels.',
+  description: 'Our definitive editorial rankings — by country, region, city, and experience type.',
 }
 
 export default async function RankingsPage() {
-  let lists: {
-    _id: string; title: string; slug: string; eyebrow?: string; description?: string;
-    heroImageUrl?: string; propertyCount?: string; updatedLabel?: string;
-    countryCount?: string; region?: string; experience?: string;
-    country?: { name: string; slug: string } | null;
-    state?: { name: string; slug: string } | null;
-    city?: { name: string; slug: string } | null;
-    experiences?: { name: string; slug: string }[] | null;
-  }[] = []
-  let entriesByList: Record<string, {
-    _id: string; rank: number; hotelName: string; regionTag?: string; location?: string;
-    excerpt?: string; imageUrl?: string; tags?: string[]; isEditorsPick?: boolean;
-    linkedReview?: { slug: string; hotelName: string } | null
-  }[]> = {}
-  let filterOptions: {
-    countries: { _id: string; name: string; slug: string }[]
-    states: { _id: string; name: string; slug: string; country?: { _id: string; slug: string } }[]
-    cities: { _id: string; name: string; slug: string; state?: { _id: string; slug: string }; country?: { _id: string; slug: string } }[]
-    experiences: { _id: string; name: string; slug: string; icon?: string }[]
-  } = { countries: [], states: [], cities: [], experiences: [] }
+  let data: {
+    countries: { slug: string; name: string; continent: string }[]
+    regions: { slug: string; name: string; countrySlug?: string }[]
+    cities: { slug: string; name: string; countrySlug?: string; regionSlug?: string }[]
+    hotels: { experiences?: string[]; countrySlug?: string; regionSlug?: string; citySlug?: string; continent?: string }[]
+  } = { countries: [], regions: [], cities: [], hotels: [] }
 
   try {
-    const [fetchedLists, fetchedFilters] = await Promise.all([
-      client.fetch(ALL_RANKING_LISTS_QUERY),
-      client.fetch(ALL_FILTER_OPTIONS_QUERY),
-    ])
-    lists = fetchedLists || []
-    filterOptions = fetchedFilters || filterOptions
-    const entryResults = await Promise.all(
-      lists.map(l => client.fetch(RANKING_ENTRIES_BY_LIST_QUERY, { slug: l.slug }))
-    )
-    lists.forEach((l, i) => { entriesByList[l.slug] = entryResults[i] || [] })
+    data = await client.fetch(RANKINGS_INDEX_QUERY)
   } catch (e) {
     console.error('[RankingsPage] Sanity fetch failed:', e)
   }
@@ -51,27 +27,21 @@ export default async function RankingsPage() {
     <>
       <section
         className="page-hero"
-        style={{
-          height: 460,
-          backgroundImage: "url('https://www.hotelplatz.it/wp-content/uploads/header-platz-5.jpg')",
-          backgroundSize: 'cover', backgroundPosition: 'center 50%',
-        }}
+        style={{ height: '55vh', background: 'linear-gradient(160deg, var(--dark-2) 0%, var(--dark) 100%)' }}
       >
         <div className="page-hero-content" style={{ maxWidth: 700 }}>
           <p className="page-eyebrow">Definitive Lists</p>
           <h1 className="page-title">Hotel <em>Rankings</em></h1>
-          <p className="page-sub">Our definitive editorial rankings across every category — from beach resorts to ski lodges, safari camps to city hotels.</p>
+          <p className="page-sub">Our definitive editorial rankings — by country, region, city, and experience type.</p>
         </div>
       </section>
 
       <Suspense fallback={null}>
         <RankingsClient
-          lists={lists}
-          entriesByList={entriesByList}
-          countries={filterOptions.countries}
-          states={filterOptions.states}
-          cities={filterOptions.cities}
-          experiences={filterOptions.experiences}
+          countries={data.countries}
+          regions={data.regions}
+          cities={data.cities}
+          hotels={data.hotels}
         />
       </Suspense>
     </>

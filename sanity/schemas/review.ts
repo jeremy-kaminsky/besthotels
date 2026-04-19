@@ -13,9 +13,17 @@ export const reviewSchema = defineType({
 
     // Location references
     defineField({ name: 'country', title: 'Country', type: 'reference', to: [{ type: 'country' }] }),
-    defineField({ name: 'state', title: 'State / Region', type: 'reference', to: [{ type: 'state' }] }),
+    defineField({ name: 'region', title: 'Region', type: 'reference', to: [{ type: 'region' }] }),
     defineField({ name: 'city', title: 'City', type: 'reference', to: [{ type: 'city' }] }),
-    defineField({ name: 'experiences', title: 'Experiences', type: 'array', of: [{ type: 'reference', to: [{ type: 'experience' }] }] }),
+    defineField({
+      name: 'experiences',
+      title: 'Experiences',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: ['Beach', 'Safari', 'Ski', 'Overwater', 'Eco', 'Wellness', 'Adults-Only', 'Honeymoon', 'Family', 'Heritage', 'City', 'Desert', 'Surf', 'Wilderness', 'Wine Country', 'Boutique'],
+      },
+    }),
 
     // Media
     defineField({ name: 'heroImage', title: 'Hero Image', type: 'image', options: { hotspot: true } }),
@@ -53,7 +61,7 @@ export const reviewSchema = defineType({
     // Score
     defineField({ name: 'score', title: 'Score (out of 10)', type: 'number' }),
 
-    // Sidebar detail rows (key/value pairs beyond the basic fields)
+    // Sidebar detail rows
     defineField({ name: 'sidebarDetails', title: 'Sidebar Details', type: 'array', of: [{
       type: 'object',
       fields: [

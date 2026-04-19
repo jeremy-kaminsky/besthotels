@@ -121,7 +121,7 @@ export default async function HomePage() {
         <div className="divider-track">
           {[...Array(2)].map((_, copy) => (
             <div key={copy} className="divider-copy" aria-hidden={copy === 1 ? true : undefined}>
-              {['Bali · Indonesia', 'Santorini · Greece', 'Maldives · Indian Ocean', 'Amalfi Coast · Italy', 'Kyoto · Japan', 'Marrakech · Morocco', 'Cape Town · South Africa', 'Patagonia · Argentina'].map((item) => (
+              {['Bali · Indonesia', 'Santorini · Greece', 'St. Barthélemy · Caribbean', 'Amalfi · Italy', 'Marrakech · Morocco', 'Kyoto · Japan', 'Maldives', 'Bora Bora · French Polynesia', 'Mykonos · Greece', 'Aspen · Colorado', 'Tulum · Mexico', 'Phuket · Thailand', 'Lake Como · Italy', 'Serengeti · Tanzania', 'Dubai · UAE', 'St. Moritz · Switzerland', 'Napa Valley · California', 'Ibiza · Spain', 'Queenstown · New Zealand', 'Seychelles'].map((item) => (
                 <div key={item} className="div-item">
                   <div className="div-dot" />
                   <span className="div-text">{item}</span>

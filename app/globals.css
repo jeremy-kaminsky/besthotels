@@ -825,3 +825,76 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 @media (max-width: 767px) {
   .reviews-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
 }
+
+/* ═══════════════════ RANKING PAGE TEMPLATE ═══════════════════ */
+.rank-page-layout { max-width: 900px; margin: 0 auto; padding: 0 3rem 6rem; }
+
+/* Featured #1 */
+.rank-featured { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; padding: 4rem 0 3rem; border-bottom: 1px solid rgba(201,169,110,0.12); }
+.rank-featured-num { font-family: var(--serif); font-size: 7rem; font-weight: 300; color: rgba(201,169,110,0.18); line-height: 1; flex-shrink: 0; padding-top: 0.4rem; }
+.rank-featured-body { padding-top: 0.5rem; }
+.rank-featured-badge { display: inline-block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 0.2rem 0.6rem; margin-bottom: 1rem; }
+.rank-featured-country { font-size: 0.75rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.rank-featured-name { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 0.5rem; }
+.rank-featured-location { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; }
+.rank-featured-desc { font-size: 1.05rem; line-height: 1.9; color: rgba(255,255,255,0.82); margin-bottom: 1.4rem; max-width: 600px; }
+.rank-review-link { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold-dark); padding-bottom: 0.2rem; margin-top: 0.8rem; display: inline-block; }
+.rank-review-link:hover { color: var(--gold-light); }
+
+/* Experience tags */
+.rank-exp-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.rank-exp-tag { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid rgba(255,255,255,0.1); padding: 0.2rem 0.55rem; transition: color 0.2s, border-color 0.2s; }
+.rank-exp-tag:hover { color: var(--gold); border-color: var(--gold-dark); }
+
+/* Caption divider between #1 and the rest */
+.rank-caption-divider { display: flex; align-items: center; gap: 1.5rem; padding: 2.5rem 0; }
+.rank-caption-line { flex: 1; height: 1px; background: rgba(201,169,110,0.12); }
+.rank-caption-text { font-size: 0.65rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(201,169,110,0.5); white-space: nowrap; }
+
+/* Entries 2–10 */
+.rank-entries-list { display: flex; flex-direction: column; }
+.rank-entry-item { padding: 2.2rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.rank-entry-item:last-child { border-bottom: none; }
+.rank-entry-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; }
+.rank-entry-country { font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); }
+.rank-entry-review-link { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold-dark); padding-bottom: 0.15rem; }
+.rank-entry-review-link:hover { color: var(--gold-light); }
+.rank-entry-name { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 300; line-height: 1.15; margin-bottom: 0.3rem; }
+.rank-entry-location { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+.rank-entry-desc { font-size: 0.96rem; line-height: 1.85; color: rgba(255,255,255,0.75); margin-bottom: 0.8rem; }
+
+/* Rankings index */
+.rankings-index-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 3rem 6rem; }
+.rankings-featured-cta { margin-bottom: 3rem; }
+.rankings-top50-card { display: flex; align-items: center; gap: 2rem; padding: 2rem 2.5rem; background: rgba(201,169,110,0.06); border: 1px solid rgba(201,169,110,0.2); transition: background 0.2s, border-color 0.2s; }
+.rankings-top50-card:hover { background: rgba(201,169,110,0.1); border-color: rgba(201,169,110,0.35); }
+.rankings-top50-eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); min-width: 160px; }
+.rankings-top50-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; flex: 1; }
+.rankings-top50-arrow { color: var(--gold); font-size: 1.1rem; }
+.rankings-filter-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+.rankings-filter-select { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--white); padding: 0.6rem 1rem; font-size: 0.8rem; letter-spacing: 0.1em; cursor: pointer; font-family: var(--sans); }
+.rankings-filter-select:focus { outline: none; border-color: var(--gold-dark); }
+.rankings-filter-select option { background: #1E1E1D; }
+.rankings-filter-clear { background: transparent; border: none; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; padding: 0 0.5rem; }
+.rankings-filter-clear:hover { color: var(--gold); }
+.rankings-empty { color: var(--muted); font-size: 0.88rem; letter-spacing: 0.12em; text-align: center; padding: 4rem 0; }
+.rankings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.rankings-card { display: flex; flex-direction: column; padding: 1.8rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); transition: background 0.2s, border-color 0.2s; gap: 0.6rem; }
+.rankings-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(201,169,110,0.2); }
+.rankings-card-category { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+.rankings-card-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 300; line-height: 1.3; }
+.rankings-card-count { font-size: 0.7rem; letter-spacing: 0.14em; color: var(--muted); margin-top: auto; }
+
+@media (max-width: 900px) {
+  .rank-featured { grid-template-columns: 1fr; gap: 0; }
+  .rank-featured-num { font-size: 4rem; }
+  .rank-page-layout { padding: 0 1.2rem 4rem; }
+  .rankings-grid { grid-template-columns: 1fr 1fr; }
+  .rankings-index-wrap { padding: 2rem 1.2rem 4rem; }
+  .rankings-top50-card { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .rankings-grid { grid-template-columns: 1fr; }
+  .rank-caption-text { font-size: 0.58rem; letter-spacing: 0.16em; }
+}

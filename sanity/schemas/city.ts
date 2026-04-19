@@ -8,19 +8,19 @@ export const citySchema = defineType({
     defineField({ name: 'name', title: 'Name', type: 'string', validation: (r) => r.required() }),
     defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' }, validation: (r) => r.required() }),
     defineField({
-      name: 'state',
-      title: 'State / Region',
-      type: 'reference',
-      to: [{ type: 'state' }],
-    }),
-    defineField({
       name: 'country',
-      title: 'Country (direct, if no state)',
+      title: 'Country',
       type: 'reference',
       to: [{ type: 'country' }],
     }),
+    defineField({
+      name: 'region',
+      title: 'Region',
+      type: 'reference',
+      to: [{ type: 'region' }],
+    }),
   ],
   preview: {
-    select: { title: 'name', subtitle: 'state.name' },
+    select: { title: 'name', subtitle: 'country.name' },
   },
 })

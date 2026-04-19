@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
+const CONTINENTS = ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Caribbean', 'Middle East']
+
 export const countrySchema = defineType({
   name: 'country',
   title: 'Country',
@@ -7,6 +9,12 @@ export const countrySchema = defineType({
   fields: [
     defineField({ name: 'name', title: 'Name', type: 'string', validation: (r) => r.required() }),
     defineField({ name: 'slug', title: 'Slug', type: 'slug', options: { source: 'name' }, validation: (r) => r.required() }),
-    defineField({ name: 'parentRegion', title: 'Parent Region', type: 'string', description: 'e.g. Caribbean, Asia, Africa' }),
+    defineField({
+      name: 'continent',
+      title: 'Continent',
+      type: 'string',
+      options: { list: CONTINENTS },
+      validation: (r) => r.required(),
+    }),
   ],
 })
