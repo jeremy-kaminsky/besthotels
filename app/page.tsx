@@ -60,17 +60,17 @@ export default async function HomePage() {
         <div className="hero-right">
           <div
             className="hero-img-main"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1400&q=85&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/Shebara-Resort-Futuristic-Luxury.jpg')" }}
           >
             <div className="photo-overlay" />
           </div>
           <div className="hero-img-split">
-            <div style={{ backgroundImage: "url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1400&q=85&auto=format&fit=crop')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-            <div style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85&auto=format&fit=crop')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/luxury-overwater-villa-Red-Sea-private-pool-Shebara-resort.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ backgroundImage: "url('https://explorebesthotels.com/wp-content/uploads/2026/03/Shebara-resort-ocean-view-turquoise-water-Red-Sea-edited.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
           </div>
           <div className="hero-stat">
-            <div className="hero-stat-num">Marrakech</div>
-            <div className="hero-stat-label">Featured · Park Hyatt Marrakech</div>
+            <div className="hero-stat-num">Red Sea</div>
+            <div className="hero-stat-label">Featured · Shebara Resort</div>
           </div>
         </div>
       </section>
