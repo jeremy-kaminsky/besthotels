@@ -805,3 +805,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   .circle-photo { width: 180px !important; height: 180px !important; }
   .founder-name { font-size: 1.4rem !important; }
 }
+
+@media (max-width: 767px) {
+  .reviews-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
+}

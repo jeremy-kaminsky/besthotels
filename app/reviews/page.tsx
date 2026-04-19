@@ -32,12 +32,12 @@ export default async function ReviewsPage() {
   return (
     <>
       <section
-        className="page-hero"
+        className="page-hero reviews-hero"
         style={{
-          height: 420,
+          height: '55vh',
           backgroundImage: "url('/images/reviews-hero.jpg')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center 60%',
+          backgroundPosition: 'center bottom',
         }}
       >
         <div className="page-hero-content">
