@@ -104,19 +104,19 @@ export default async function HomePage() {
                   src={card.img}
                   alt={card.name}
                   fill
-                  priority={i === 0}
+                  priority
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
                 />
               )}
-              {card.slug ? (
-                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 2 }} />
-              ) : null}
-              <div className="stay-overlay" />
-              <div className="stay-info">
+              <div className="stay-overlay" style={{ zIndex: 1 }} />
+              <div className="stay-info" style={{ zIndex: 2 }}>
                 <div className="stay-name">{card.name}</div>
                 <div className="stay-loc">{card.loc}</div>
               </div>
+              {card.slug ? (
+                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 3 }} />
+              ) : null}
             </div>
           ))}
         </div>

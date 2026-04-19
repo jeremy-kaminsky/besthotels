@@ -10,13 +10,12 @@ export const ALL_REVIEWS_QUERY = groq`
     locationLabel,
     score,
     excerpt,
-    heroImageUrl,
-    heroImage,
+    "heroImageUrl": coalesce(heroImageUrl, heroImage.asset->url),
     publishedDate,
     country->{ name, "slug": slug.current },
-    state->{ name, "slug": slug.current },
+    region->{ name, "slug": slug.current },
     city->{ name, "slug": slug.current },
-    experiences[]->{ name, "slug": slug.current }
+    experiences
   }
 `
 

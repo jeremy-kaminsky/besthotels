@@ -25,15 +25,10 @@ export default async function RankingsPage() {
 
   return (
     <>
-      <section
-        className="page-hero"
-        style={{ height: '55vh', background: 'linear-gradient(160deg, var(--dark-2) 0%, var(--dark) 100%)' }}
-      >
-        <div className="page-hero-content" style={{ maxWidth: 700 }}>
-          <p className="page-eyebrow">Definitive Lists</p>
-          <h1 className="page-title">Hotel <em>Rankings</em></h1>
-          <p className="page-sub">Our definitive editorial rankings — by country, region, city, and experience type.</p>
-        </div>
+      <section className="rankings-hero">
+        <p className="page-eyebrow">Definitive Lists</p>
+        <h1 className="page-title">Hotel <em>Rankings</em></h1>
+        <p className="page-sub">Our definitive editorial rankings — by country, region, city, and experience type.</p>
       </section>
 
       <Suspense fallback={null}>
