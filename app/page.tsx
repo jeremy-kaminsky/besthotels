@@ -119,10 +119,42 @@ export default async function HomePage() {
       <div className="section-divider" style={{ margin: '0' }} />
 
       {/* ABOUT */}
-      <section className="about-strip" id="about">
-        <div className="about-photo" style={{ position: 'relative', overflow: 'hidden' }}>
-          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'contain', objectPosition: 'center bottom' }} />
+      <section id="about" style={{
+        display: 'grid',
+        gridTemplateColumns: '380px 1fr',
+        gap: '4rem',
+        padding: '4rem 3rem 5rem',
+        alignItems: 'center',
+      }}>
+        {/* Circle photo column */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            {/* Outer concentric ring */}
+            <div style={{
+              position: 'absolute', inset: 0,
+              borderRadius: '50%',
+              border: '1px solid rgba(201,169,110,0.06)',
+            }} />
+            {/* Photo with gold ring */}
+            <div style={{
+              width: 340, height: 340,
+              borderRadius: '50%',
+              border: '1px solid rgba(201,169,110,0.25)',
+              overflow: 'hidden',
+              position: 'relative',
+              flexShrink: 0,
+            }}>
+              <Image
+                src="/images/jeremy-kaminsky.png"
+                alt="Jeremy Kaminsky"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+              />
+            </div>
+          </div>
         </div>
+
+        {/* Content column */}
         <div className="about-content">
           <p className="section-eyebrow">Leadership</p>
           <blockquote className="about-quote">&quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;</blockquote>

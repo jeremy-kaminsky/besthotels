@@ -700,6 +700,9 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   .stays-grid { grid-template-columns: 1fr; }
   .stay-card { height: 280px; }
 
+  #about { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; text-align: center; }
+  #about .about-content { padding: 0; }
+  #about .about-sig { justify-content: center; }
   .about-strip, .mission, .founder, .contact-layout { grid-template-columns: 1fr; }
   .about-photo, .mission-photo, .founder-photo { min-height: 280px; }
   .about-content, .mission-text, .founder-content { padding: 2.5rem 1.2rem; }
