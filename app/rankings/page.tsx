@@ -53,8 +53,8 @@ export default async function RankingsPage() {
         className="page-hero"
         style={{
           height: 460,
-          backgroundImage: "url('https://images.unsplash.com/photo-1444201983204-c43cbd584d93?w=2000&q=85&auto=format&fit=crop')",
-          backgroundSize: 'cover', backgroundPosition: 'center 60%',
+          backgroundImage: "url('https://www.hotelplatz.it/wp-content/uploads/header-platz-5.jpg')",
+          backgroundSize: 'cover', backgroundPosition: 'center 50%',
         }}
       >
         <div className="page-hero-content" style={{ maxWidth: 700 }}>

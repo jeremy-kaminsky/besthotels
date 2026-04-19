@@ -8,6 +8,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'explorebesthotels.com' },
       { protocol: 'https', hostname: 'assets.hyatt.com' },
       { protocol: 'https', hostname: 'imageio.forbes.com' },
+      { protocol: 'https', hostname: 'www.hotelplatz.it' },
     ],
   },
 }
