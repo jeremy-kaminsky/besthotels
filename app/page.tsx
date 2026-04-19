@@ -118,12 +118,18 @@ export default async function HomePage() {
 
       {/* TICKER */}
       <div className="divider">
-        {['Bali · Indonesia', 'Santorini · Greece', 'Maldives · Indian Ocean', 'Amalfi Coast · Italy', 'Kyoto · Japan', 'Marrakech · Morocco', 'Cape Town · South Africa', 'Patagonia · Argentina'].map((item) => (
-          <div key={item} className="div-item">
-            <div className="div-dot" />
-            <span className="div-text">{item}</span>
-          </div>
-        ))}
+        <div className="divider-track">
+          {[...Array(2)].map((_, copy) => (
+            <div key={copy} className="divider-copy" aria-hidden={copy === 1 ? true : undefined}>
+              {['Bali · Indonesia', 'Santorini · Greece', 'Maldives · Indian Ocean', 'Amalfi Coast · Italy', 'Kyoto · Japan', 'Marrakech · Morocco', 'Cape Town · South Africa', 'Patagonia · Argentina'].map((item) => (
+                <div key={item} className="div-item">
+                  <div className="div-dot" />
+                  <span className="div-text">{item}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* GOLD DIVIDER */}
