@@ -14,8 +14,8 @@ export default function AboutPage() {
         className="page-hero"
         style={{
           height: 500,
-          backgroundImage: "url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=2000&q=85&auto=format&fit=crop')",
-          backgroundSize: 'cover', backgroundPosition: 'center 40%',
+          backgroundImage: "url('https://www.veneto.info/en/wp-content/uploads/sites/155/verona-hd.jpg')",
+          backgroundSize: 'cover', backgroundPosition: 'center 50%',
         }}
       >
         <div className="page-hero-content">
