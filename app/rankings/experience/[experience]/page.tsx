@@ -25,23 +25,23 @@ export async function generateStaticParams() {
   }
   return Object.entries(counts)
     .filter(([, c]) => c >= MIN_HOTELS)
-    .map(([slug]) => ({ slug }))
+    .map(([experience]) => ({ experience }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const exp = slugToExp(params.slug) ?? params.slug
+export async function generateMetadata({ params }: { params: { experience: string } }) {
+  const exp = slugToExp(params.experience) ?? params.experience
   return { title: `Top ${exp} Hotels` }
 }
 
-export default async function ExperienceRankingPage({ params }: { params: { slug: string } }) {
-  const exp = slugToExp(params.slug)
+export default async function ExperienceRankingPage({ params }: { params: { experience: string } }) {
+  const exp = slugToExp(params.experience)
   if (!exp) notFound()
 
   const hotels: RankingHotel[] = await client.fetch(HOTELS_BY_EXPERIENCE_QUERY, { exp })
 
   if (hotels.length < MIN_HOTELS) notFound()
 
-  const rankingSlug = `experience-${params.slug}`
+  const rankingSlug = `experience-${params.experience}`
 
   return (
     <RankingPageTemplate

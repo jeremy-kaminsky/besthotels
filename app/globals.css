@@ -549,6 +549,9 @@ footer {
 .hero-cta { display: inline-flex; align-items: center; gap: 1rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid var(--gold-dark); padding-bottom: 0.5rem; transition: gap 0.3s; width: fit-content; }
 .hero-cta:hover { gap: 1.5rem; }
 .hero-cta::after { content: '→'; font-size: 1rem; }
+.hero-cta-btn { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-family: var(--sans); color: var(--gold); background: transparent; border: 1px solid var(--gold); padding: 1rem 2.5rem; transition: background 0.2s, color 0.2s; cursor: pointer; width: fit-content; }
+.hero-cta-btn:hover { background: var(--gold); color: var(--dark); }
+.hero-cta-btn::after { content: '→'; font-size: 1rem; }
 .hero-right { display: grid; grid-template-rows: 58% 42%; position: relative; overflow: hidden; }
 .hero-img-main { position: relative; background-size: cover; background-position: center; }
 .hero-img-split { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--dark); }
@@ -559,8 +562,10 @@ footer {
 
 .divider {
   position: relative;
-  padding: 2.2rem 0;
-  border-top: 1px solid rgba(201,169,110,0.08);
+  padding: 4rem 0;
+  background: var(--dark-3);
+  border-top: 1px solid rgba(201,169,110,0.12);
+  border-bottom: 1px solid rgba(201,169,110,0.12);
   border-bottom: 1px solid rgba(201,169,110,0.08);
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
@@ -603,7 +608,7 @@ footer {
 .about-sig-name { font-family: var(--serif); font-size: 1.02rem; font-style: italic; color: var(--gold); }
 .about-sig-role { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; }
 
-.press-section { padding: 3rem 3rem; border-top: 1px solid rgba(201,169,110,0.08); border-bottom: 1px solid rgba(201,169,110,0.08); text-align: center; }
+.press-section { padding: 5rem 3rem; background: var(--dark-3); border-top: 1px solid rgba(201,169,110,0.12); border-bottom: 1px solid rgba(201,169,110,0.12); text-align: center; }
 .press-label { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: #C9A96E; margin-bottom: 2.5rem; }
 .press-logos { display: flex; align-items: center; justify-content: center; gap: 4.5rem; flex-wrap: wrap; }
 .press-logo { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: rgba(250,250,247,0.9); letter-spacing: 0.04em; transition: color 0.3s; font-style: italic; cursor: default; }

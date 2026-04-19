@@ -55,7 +55,7 @@ export default async function HomePage() {
               <div className="hero-meta-label">Audience</div>
             </div>
           </div>
-          <Link href="/reviews" className="hero-cta fu">Explore Featured Stays</Link>
+          <Link href="/reviews" className="hero-cta-btn fu">Explore Featured Stays</Link>
         </div>
         <div className="hero-right">
           <div
@@ -75,8 +75,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* PRESS */}
-      <section className="press-section" style={{ padding: '3rem 3rem 2.5rem' }}>
+      {/* PRESS — FIX 2B: dark-3 background, more padding, dividers */}
+      <section className="press-section">
         <p className="press-label">As Seen In</p>
         <div className="press-logos">
           <span className="press-logo">Axios</span>
@@ -87,8 +87,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED STAYS */}
-      <section id="stays">
+      {/* FEATURED STAYS — FIX 1: Next.js Image with fill for mobile */}
+      <section id="stays" style={{ background: 'var(--dark)' }}>
         <div className="section-header">
           <div>
             <p className="section-eyebrow">Handpicked escapes</p>
@@ -98,13 +98,19 @@ export default async function HomePage() {
         </div>
         <div className="stays-grid">
           {displayCards.map((card, i) => (
-            <div
-              key={i}
-              className="stay-card"
-              style={{ backgroundImage: `url('${card.img}')` }}
-            >
+            <div key={i} className="stay-card">
+              {card.img && (
+                <Image
+                  src={card.img}
+                  alt={card.name}
+                  fill
+                  priority={i === 0}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+              )}
               {card.slug ? (
-                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 1 }} />
+                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 2 }} />
               ) : null}
               <div className="stay-overlay" />
               <div className="stay-info">
@@ -116,7 +122,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TICKER */}
+      {/* TICKER — FIX 3: own band with padding, dark-3 bg, dividers */}
       <div className="divider">
         <div className="divider-track">
           {[...Array(2)].map((_, copy) => (
@@ -132,16 +138,15 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* GOLD DIVIDER */}
-      <div style={{ margin: '0 3rem', height: '1px', background: 'rgba(201,169,110,0.15)' }} />
-
-      {/* ABOUT */}
+      {/* ABOUT — FIX 2C: dark-2 background for visual contrast */}
       <section id="about" style={{
         display: 'grid',
         gridTemplateColumns: '380px 1fr',
         gap: '4rem',
-        padding: '4rem 3rem 5rem',
+        padding: '7rem 3rem 7rem',
         alignItems: 'center',
+        background: 'var(--dark-2)',
+        borderTop: '1px solid rgba(201,169,110,0.08)',
       }}>
         {/* Circle photo column */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

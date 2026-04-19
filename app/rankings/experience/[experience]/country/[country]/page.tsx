@@ -26,13 +26,13 @@ export async function generateStaticParams() {
   return Object.entries(counts)
     .filter(([, c]) => c >= MIN_HOTELS)
     .map(([key]) => {
-      const [exp, country] = key.split('|')
-      return { exp, country }
+      const [experience, country] = key.split('|')
+      return { experience, country }
     })
 }
 
-export default async function ExpCountryRankingPage({ params }: { params: { exp: string; country: string } }) {
-  const exp = slugToExp(params.exp)
+export default async function ExpCountryRankingPage({ params }: { params: { experience: string; country: string } }) {
+  const exp = slugToExp(params.experience)
   if (!exp) notFound()
 
   const hotels: RankingHotel[] = await client.fetch(HOTELS_BY_EXP_AND_COUNTRY_QUERY, {
@@ -43,7 +43,7 @@ export default async function ExpCountryRankingPage({ params }: { params: { exp:
   if (hotels.length < MIN_HOTELS) notFound()
 
   const countryName = hotels[0]?.country?.name ?? params.country
-  const rankingSlug = `experience-${params.exp}-country-${params.country}`
+  const rankingSlug = `experience-${params.experience}-country-${params.country}`
 
   return (
     <RankingPageTemplate

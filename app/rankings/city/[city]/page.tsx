@@ -9,22 +9,22 @@ export async function generateStaticParams() {
   const cities: { slug: string; count: number }[] = await client.fetch(HOTEL_COUNT_BY_CITY_QUERY)
   return cities
     .filter(c => c.count >= MIN_HOTELS)
-    .map(c => ({ slug: c.slug }))
+    .map(c => ({ city: c.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { city: string } }) {
   return {
-    title: `Top Hotels in ${params.slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
+    title: `Top Hotels in ${params.city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`,
   }
 }
 
-export default async function CityRankingPage({ params }: { params: { slug: string } }) {
-  const hotels: RankingHotel[] = await client.fetch(HOTELS_BY_CITY_QUERY, { slug: params.slug })
+export default async function CityRankingPage({ params }: { params: { city: string } }) {
+  const hotels: RankingHotel[] = await client.fetch(HOTELS_BY_CITY_QUERY, { slug: params.city })
 
   if (hotels.length < MIN_HOTELS) notFound()
 
-  const cityName = hotels[0]?.city?.name ?? params.slug
-  const rankingSlug = `city-${params.slug}`
+  const cityName = hotels[0]?.city?.name ?? params.city
+  const rankingSlug = `city-${params.city}`
 
   return (
     <RankingPageTemplate
