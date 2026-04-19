@@ -703,9 +703,20 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   #about { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; text-align: center; }
   #about .about-content { padding: 0; }
   #about .about-sig { justify-content: center; }
+
+  /* Circle headshot mobile — shrink rings and photo */
+  .circle-outer-ring { width: 260px !important; height: 260px !important; }
+  .circle-photo { width: 220px !important; height: 220px !important; }
+
+  /* Circle section stacking */
   .circle-founder-section { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; }
-  .circle-founder-section .founder-content { order: 2; padding: 0 !important; }
+  .circle-founder-section .founder-content { order: 2; padding: 0 1.2rem !important; }
   .circle-founder-section .circle-photo-col { order: 1; }
+
+  /* Reduce founder text sizes on mobile */
+  .founder-name { font-size: 1.6rem !important; }
+  .founder-eyebrow { letter-spacing: 0.15em !important; }
+  .founder-title { letter-spacing: 0.1em !important; font-size: 0.7rem !important; }
   .about-strip, .mission, .founder, .contact-layout { grid-template-columns: 1fr; }
   .about-photo, .mission-photo, .founder-photo { min-height: 280px; }
   .about-content, .mission-text, .founder-content { padding: 2.5rem 1.2rem; }
@@ -776,4 +787,9 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   .stat-item { border-right: none; }
   .related-grid { grid-template-columns: 1fr; }
   .rank-entry { grid-template-columns: 40px 1fr; }
+
+  /* Very small screens — shrink circles further */
+  .circle-outer-ring { width: 210px !important; height: 210px !important; }
+  .circle-photo { width: 180px !important; height: 180px !important; }
+  .founder-name { font-size: 1.4rem !important; }
 }

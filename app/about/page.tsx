@@ -65,9 +65,9 @@ export default function AboutPage() {
       {/* JEREMY */}
       <section className="circle-founder-section" style={{ display: 'grid', gridTemplateColumns: '380px 1fr', gap: '4rem', padding: '4rem 3rem 5rem', alignItems: 'center' }}>
         <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
-            <div style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
               <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
             </div>
           </div>
@@ -100,9 +100,9 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
-            <div style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
               <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
             </div>
           </div>

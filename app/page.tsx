@@ -139,15 +139,11 @@ export default async function HomePage() {
       }}>
         {/* Circle photo column */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             {/* Outer concentric ring */}
-            <div style={{
-              position: 'absolute', inset: 0,
-              borderRadius: '50%',
-              border: '1px solid rgba(201,169,110,0.06)',
-            }} />
+            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
             {/* Photo with gold ring */}
-            <div style={{
+            <div className="circle-photo" style={{
               width: 340, height: 340,
               borderRadius: '50%',
               border: '1px solid rgba(201,169,110,0.25)',
