@@ -17,8 +17,8 @@ export default function ContactPage() {
         className="page-hero"
         style={{
           height: 420,
-          backgroundImage: "url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=2000&q=85&auto=format&fit=crop')",
-          backgroundSize: 'cover', backgroundPosition: 'center 40%',
+          backgroundImage: "url('https://imageio.forbes.com/specials-images/imageserve/670805de01d1edffaa39132b/06-FINAL-LOBBY-DEI-DOGI-Post-M/0x0.jpg?format=jpg&width=1920')",
+          backgroundSize: 'cover', backgroundPosition: 'center 50%',
         }}
       >
         <div className="page-hero-content">
