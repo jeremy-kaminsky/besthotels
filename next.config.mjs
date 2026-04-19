@@ -9,7 +9,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'assets.hyatt.com' },
       { protocol: 'https', hostname: 'imageio.forbes.com' },
       { protocol: 'https', hostname: 'www.hotelplatz.it' },
-      { protocol: 'https', hostname: 'www.veneto.info' },
+      { protocol: 'https', hostname: 'blog.italotreno.com' },
     ],
   },
 }

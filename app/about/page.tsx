@@ -14,7 +14,7 @@ export default function AboutPage() {
         className="page-hero"
         style={{
           height: 500,
-          backgroundImage: "url('https://www.veneto.info/en/wp-content/uploads/sites/155/verona-hd.jpg')",
+          backgroundImage: "url('https://blog.italotreno.com/wp-content/uploads/2021/10/iStock-1215527379-1140x660.jpg')",
           backgroundSize: 'cover', backgroundPosition: 'center 50%',
         }}
       >
