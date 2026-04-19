@@ -118,6 +118,21 @@ export default async function HomePage() {
       {/* DIVIDER */}
       <div className="section-divider" style={{ margin: '0' }} />
 
+      {/* PRESS */}
+      <section className="press-section" style={{ padding: '3rem 3rem 2.5rem' }}>
+        <p className="press-label">As Seen In</p>
+        <div className="press-logos">
+          <span className="press-logo">Axios</span>
+          <span className="press-logo" style={{ fontSize: '1.1rem', lineHeight: '1.25' }}>
+            Condé Nast<br /><span style={{ fontStyle: 'normal', fontSize: '0.7em', letterSpacing: '0.14em' }}>Traveler</span>
+          </span>
+          <span className="press-logo ss">HuffPost</span>
+        </div>
+      </section>
+
+      {/* GOLD DIVIDER */}
+      <div style={{ margin: '0 3rem', height: '1px', background: 'rgba(201,169,110,0.15)' }} />
+
       {/* ABOUT */}
       <section id="about" style={{
         display: 'grid',
@@ -168,18 +183,6 @@ export default async function HomePage() {
               <div className="about-sig-role">Owner &amp; President, Best Hotels</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* PRESS */}
-      <section className="press-section">
-        <p className="press-label">As Seen In</p>
-        <div className="press-logos">
-          <span className="press-logo">Axios</span>
-          <span className="press-logo" style={{ fontSize: '1.1rem', lineHeight: '1.25' }}>
-            Condé Nast<br /><span style={{ fontStyle: 'normal', fontSize: '0.7em', letterSpacing: '0.14em' }}>Traveler</span>
-          </span>
-          <span className="press-logo ss">HuffPost</span>
         </div>
       </section>
 

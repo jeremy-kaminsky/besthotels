@@ -703,11 +703,12 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   #about { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; text-align: center; }
   #about .about-content { padding: 0; }
   #about .about-sig { justify-content: center; }
+  .circle-founder-section { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; }
+  .circle-founder-section .founder-content { order: 2; padding: 0 !important; }
+  .circle-founder-section .circle-photo-col { order: 1; }
   .about-strip, .mission, .founder, .contact-layout { grid-template-columns: 1fr; }
   .about-photo, .mission-photo, .founder-photo { min-height: 280px; }
   .about-content, .mission-text, .founder-content { padding: 2.5rem 1.2rem; }
-  .founder--inverted .founder-photo { order: unset; }
-  .founder--inverted .founder-content { order: unset; }
 
   .stats-row { grid-template-columns: 1fr 1fr; }
   .stat-item { padding: 2rem 1.2rem; border-right: 1px solid rgba(201,169,110,0.08); border-bottom: 1px solid rgba(201,169,110,0.08); }

@@ -63,9 +63,14 @@ export default function AboutPage() {
       </div>
 
       {/* JEREMY */}
-      <section className="founder">
-        <div className="founder-photo" style={{ position: 'relative', overflow: 'hidden' }}>
-          <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'contain', objectPosition: 'center bottom' }} />
+      <section className="circle-founder-section" style={{ display: 'grid', gridTemplateColumns: '380px 1fr', gap: '4rem', padding: '4rem 3rem 5rem', alignItems: 'center' }}>
+        <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
+            <div style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+              <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
+            </div>
+          </div>
         </div>
         <div className="founder-content">
           <div className="founder-eyebrow">Owner &amp; President</div>
@@ -81,11 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* JAKE */}
-      <section className="founder founder--inverted" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-        <div
-          className="founder-photo"
-          style={{ backgroundImage: "url('/images/jake-trerotola.png')", backgroundSize: 'cover', backgroundPosition: 'center top' }}
-        />
+      <section className="circle-founder-section" style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: '4rem', padding: '4rem 3rem 5rem', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="founder-content">
           <div className="founder-eyebrow">Founder &amp; Creative Director</div>
           <div className="founder-name">Jake Trerotola</div>
@@ -96,6 +97,14 @@ export default function AboutPage() {
           <div className="founder-bio">
             <p>Jake has spent the past five years traveling to extraordinary properties across six continents, building one of the most trusted luxury hotel editorial platforms in the world. His work has been featured in Axios, Condé Nast Traveler, and HuffPost.</p>
             <p>He is based between New York and wherever the next great hotel is.</p>
+          </div>
+        </div>
+        <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
+            <div style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
+            </div>
           </div>
         </div>
       </section>
