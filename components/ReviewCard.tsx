@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { resolveHeroImage } from '@/lib/heroImages'
 
 interface ReviewCardProps {
   slug: string
@@ -22,12 +23,13 @@ export default function ReviewCard({
   featured,
 }: ReviewCardProps) {
   const fallback = 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=85&auto=format&fit=crop'
+  const img = resolveHeroImage(slug, heroImageUrl) || fallback
 
   return (
     <Link
       href={`/reviews/${slug}`}
       className={`review-card${featured ? ' featured' : ''}`}
-      style={{ backgroundImage: `url('${heroImageUrl || fallback}')` }}
+      style={{ backgroundImage: `url('${img}')` }}
     >
       <div className="review-overlay" />
       {score && (

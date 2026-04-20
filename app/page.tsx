@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { client } from '@/sanity/client'
 import { ALL_REVIEWS_QUERY } from '@/sanity/queries/reviews'
 import NewsletterForm from '@/components/NewsletterForm'
+import { resolveHeroImage } from '@/lib/heroImages'
 
 export default async function HomePage() {
   let reviews: {
@@ -17,13 +18,6 @@ export default async function HomePage() {
 
   const featuredReviews = reviews.slice(0, 5)
 
-  // Local copies of review hero images — served from /public to avoid cross-origin blocking
-  const LOCAL_HERO_IMAGES: Record<string, string> = {
-    'shebara-resort-saudi-arabia': '/images/shebara-resort-hero.jpg',
-    'secret-bay-dominica': '/images/secret-bay-hero.jpg',
-    'le-sereno-st-barthelemy': '/images/le-sereno-hero.jpg',
-  }
-
   const placeholderCards = [
     { name: 'Hanging Gardens of Bali', loc: 'Ubud · Indonesia', img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1400&q=85&auto=format&fit=crop' },
     { name: 'Katikies Santorini', loc: 'Oia · Greece', img: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1400&q=85&auto=format&fit=crop' },
@@ -33,7 +27,7 @@ export default async function HomePage() {
   ]
 
   const displayCards = featuredReviews.length > 0
-    ? featuredReviews.map((r, i) => ({ name: r.hotelName, loc: r.locationLabel || '', img: LOCAL_HERO_IMAGES[r.slug] || r.heroImageUrl || placeholderCards[i]?.img || '', slug: r.slug }))
+    ? featuredReviews.map((r, i) => ({ name: r.hotelName, loc: r.locationLabel || '', img: resolveHeroImage(r.slug, r.heroImageUrl) || placeholderCards[i]?.img || '', slug: r.slug }))
     : placeholderCards.map((p, i) => ({ ...p, slug: '' }))
 
   return (
