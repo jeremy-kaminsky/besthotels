@@ -830,7 +830,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 
 @media (max-width: 767px) {
   .reviews-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
-  .reviews-hero img { object-position: center 70% !important; }
+  .reviews-hero img { object-position: 50% 15% !important; }
 }
 
 /* ═══════════════════ RANKING PAGE TEMPLATE ═══════════════════ */
