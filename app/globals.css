@@ -608,7 +608,7 @@ footer {
 .about-sig-name { font-family: var(--serif); font-size: 1.02rem; font-style: italic; color: var(--gold); }
 .about-sig-role { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 0.15rem; }
 
-.press-section { padding: 5rem 3rem; background: var(--dark-3); border-top: 1px solid rgba(201,169,110,0.12); border-bottom: 1px solid rgba(201,169,110,0.12); text-align: center; }
+.press-section { padding: 2.5rem 3rem; background: var(--dark-3); border-top: 1px solid rgba(201,169,110,0.12); border-bottom: 1px solid rgba(201,169,110,0.12); text-align: center; }
 .press-label { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: #C9A96E; margin-bottom: 2.5rem; }
 .press-logos { display: flex; align-items: center; justify-content: center; gap: 4.5rem; flex-wrap: wrap; }
 .press-logo { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: rgba(250,250,247,0.9); letter-spacing: 0.04em; transition: color 0.3s; font-style: italic; cursor: default; }
@@ -808,6 +808,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 @media (max-width: 767px) {
   .page-hero { height: 45vh !important; min-height: 180px; padding: 1.5rem 1rem; }
   .rankings-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
+  .press-section { padding: 2rem 1.2rem; }
   .page-eyebrow { font-size: 0.72rem; margin-bottom: 0.5rem; }
   .page-title { font-size: 1.85rem; }
   .page-sub { font-size: 0.88rem; line-height: 1.5; margin-top: 0.6rem; }

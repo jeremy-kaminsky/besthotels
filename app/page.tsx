@@ -140,7 +140,7 @@ export default async function HomePage() {
         display: 'grid',
         gridTemplateColumns: '380px 1fr',
         gap: '4rem',
-        padding: '7rem 3rem 7rem',
+        padding: '5rem 3rem',
         alignItems: 'center',
         background: 'var(--dark-2)',
         borderTop: '1px solid rgba(201,169,110,0.08)',
