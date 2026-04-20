@@ -98,24 +98,14 @@ export default async function HomePage() {
         </div>
         <div className="stays-grid">
           {displayCards.map((card, i) => (
-            <div key={i} className="stay-card">
-              {card.img && (
-                <Image
-                  src={card.img}
-                  alt={card.name}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
-                />
-              )}
-              <div className="stay-overlay" style={{ zIndex: 1 }} />
-              <div className="stay-info" style={{ zIndex: 2 }}>
+            <div key={i} className="stay-card" style={card.img ? { backgroundImage: `url(${card.img})` } : undefined}>
+              <div className="stay-overlay" />
+              <div className="stay-info">
                 <div className="stay-name">{card.name}</div>
                 <div className="stay-loc">{card.loc}</div>
               </div>
               {card.slug ? (
-                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 3 }} />
+                <Link href={`/reviews/${card.slug}`} style={{ position: 'absolute', inset: 0, zIndex: 2 }} />
               ) : null}
             </div>
           ))}
