@@ -38,7 +38,7 @@ nav {
   backdrop-filter: blur(10px);
 }
 .nav-logo {
-  font-family: var(--serif); font-size: 1.95rem; font-weight: 400;
+  font-family: var(--serif); font-size: 1.56rem; font-weight: 400;
   letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase;
 }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -574,7 +574,7 @@ footer {
 .divider-track {
   display: flex;
   width: max-content;
-  animation: marquee 50s linear infinite;
+  animation: marquee 90s linear infinite;
 }
 .divider:hover .divider-track { animation-play-state: paused; }
 .divider-copy { display: flex; align-items: center; gap: 2rem; padding: 0 2rem; }
@@ -705,7 +705,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 /* ═══════════════════ MOBILE ═══════════════════ */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.2rem; flex-wrap: wrap; gap: 0.6rem; }
-  .nav-logo { font-size: 1.5rem; letter-spacing: 0.14em; }
+  .nav-logo { font-size: 1.2rem; letter-spacing: 0.14em; }
   .nav-links { gap: 1rem; flex-wrap: wrap; }
   .nav-links a { font-size: 0.75rem; letter-spacing: 0.18em; }
 
