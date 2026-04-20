@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import RankingsFilterBar from '@/components/RankingsFilterBar'
 
 const EXPERIENCE_OPTIONS = [
   'Beach', 'Safari', 'Ski', 'Overwater', 'Eco', 'Wellness',
@@ -18,7 +19,6 @@ interface Hotel {
   countrySlug?: string
   regionSlug?: string
   citySlug?: string
-  continent?: string
 }
 
 interface RankingCard {
@@ -41,6 +41,8 @@ interface Props {
 
 export default function RankingsClient({ countries, regions, cities, hotels }: Props) {
   const [filterCountry, setFilterCountry] = useState('')
+  const [filterRegion, setFilterRegion] = useState('')
+  const [filterCity, setFilterCity] = useState('')
   const [filterExp, setFilterExp] = useState('')
 
   const rankings = useMemo<RankingCard[]>(() => {
@@ -48,23 +50,35 @@ export default function RankingsClient({ countries, regions, cities, hotels }: P
 
     for (const c of countries) {
       const count = hotels.filter(h => h.countrySlug === c.slug).length
-      if (count >= MIN_HOTELS) cards.push({ title: `Top Hotels in ${c.name}`, href: `/rankings/country/${c.slug}`, category: 'Country', count, countrySlug: c.slug })
+      if (count >= MIN_HOTELS) cards.push({
+        title: `Top Hotels in ${c.name}`, href: `/rankings/country/${c.slug}`,
+        category: 'Country', count, countrySlug: c.slug,
+      })
     }
 
     for (const r of regions) {
       const count = hotels.filter(h => h.regionSlug === r.slug).length
-      if (count >= MIN_HOTELS) cards.push({ title: `Top Hotels in ${r.name}`, href: `/rankings/region/${r.slug}`, category: 'Region', count, countrySlug: r.countrySlug, regionSlug: r.slug })
+      if (count >= MIN_HOTELS) cards.push({
+        title: `Top Hotels in ${r.name}`, href: `/rankings/region/${r.slug}`,
+        category: 'Region', count, countrySlug: r.countrySlug, regionSlug: r.slug,
+      })
     }
 
     for (const c of cities) {
       const count = hotels.filter(h => h.citySlug === c.slug).length
-      if (count >= MIN_HOTELS) cards.push({ title: `Top Hotels in ${c.name}`, href: `/rankings/city/${c.slug}`, category: 'City', count, countrySlug: c.countrySlug, regionSlug: c.regionSlug, citySlug: c.slug })
+      if (count >= MIN_HOTELS) cards.push({
+        title: `Top Hotels in ${c.name}`, href: `/rankings/city/${c.slug}`,
+        category: 'City', count, countrySlug: c.countrySlug, regionSlug: c.regionSlug, citySlug: c.slug,
+      })
     }
 
     for (const exp of EXPERIENCE_OPTIONS) {
       const slug = expToSlug(exp)
       const count = hotels.filter(h => h.experiences?.includes(exp)).length
-      if (count >= MIN_HOTELS) cards.push({ title: `Top ${exp} Hotels`, href: `/rankings/experience/${slug}`, category: 'Experience', count, expSlug: slug })
+      if (count >= MIN_HOTELS) cards.push({
+        title: `Top ${exp} Hotels`, href: `/rankings/experience/${slug}`,
+        category: 'Experience', count, expSlug: slug,
+      })
     }
 
     return cards
@@ -72,11 +86,13 @@ export default function RankingsClient({ countries, regions, cities, hotels }: P
 
   const filtered = useMemo(() => rankings.filter(card => {
     if (filterCountry && card.countrySlug !== filterCountry) return false
+    if (filterRegion && card.regionSlug !== filterRegion) return false
+    if (filterCity && card.citySlug !== filterCity) return false
     if (filterExp && card.expSlug !== filterExp) return false
     return true
-  }), [rankings, filterCountry, filterExp])
+  }), [rankings, filterCountry, filterRegion, filterCity, filterExp])
 
-  const hasFilters = filterCountry || filterExp
+  const hasFilters = !!(filterCountry || filterRegion || filterCity || filterExp)
 
   return (
     <div className="rankings-index-wrap">
@@ -88,22 +104,25 @@ export default function RankingsClient({ countries, regions, cities, hotels }: P
         </Link>
       </div>
 
-      <div className="rankings-filter-row">
-        <select value={filterCountry} onChange={e => setFilterCountry(e.target.value)} className="rankings-filter-select">
-          <option value="">All Countries</option>
-          {countries.map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
-        </select>
-        <select value={filterExp} onChange={e => setFilterExp(e.target.value)} className="rankings-filter-select">
-          <option value="">All Experiences</option>
-          {EXPERIENCE_OPTIONS.map(exp => <option key={exp} value={expToSlug(exp)}>{exp}</option>)}
-        </select>
-        {hasFilters && (
-          <button className="rankings-filter-clear" onClick={() => { setFilterCountry(''); setFilterExp('') }}>Clear</button>
-        )}
-      </div>
+      <RankingsFilterBar
+        countries={countries}
+        regions={regions}
+        cities={cities}
+        experienceOptions={EXPERIENCE_OPTIONS}
+        filterCountry={filterCountry}
+        filterRegion={filterRegion}
+        filterCity={filterCity}
+        filterExp={filterExp}
+        onCountryChange={setFilterCountry}
+        onRegionChange={setFilterRegion}
+        onCityChange={setFilterCity}
+        onExpChange={setFilterExp}
+      />
 
       {filtered.length === 0 ? (
-        <p className="rankings-empty">{hasFilters ? 'No rankings match your selection.' : 'No rankings available yet.'}</p>
+        <p className="rankings-empty">
+          {hasFilters ? 'No rankings match your selection.' : 'No rankings available yet.'}
+        </p>
       ) : (
         <div className="rankings-grid">
           {filtered.map(card => (
