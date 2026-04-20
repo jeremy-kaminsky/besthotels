@@ -68,13 +68,6 @@ footer {
 .footer-links a:hover { color: var(--gold); }
 .footer-copy { font-size: 0.78rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); }
 
-/* ═══════════════════ RANKINGS COMPACT HERO ═══════════════════ */
-.rankings-hero {
-  padding: 4rem 3rem 3rem;
-  background: linear-gradient(160deg, var(--dark-2) 0%, var(--dark) 100%);
-  border-bottom: 1px solid rgba(201,169,110,0.08);
-}
-
 /* ═══════════════════ PAGE HERO ═══════════════════ */
 .page-hero {
   position: relative; overflow: hidden;
@@ -814,7 +807,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 
 @media (max-width: 767px) {
   .page-hero { height: 45vh !important; min-height: 180px; padding: 1.5rem 1rem; }
-  .rankings-hero { padding: 2.5rem 1.2rem 2rem; }
+  .rankings-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
   .page-eyebrow { font-size: 0.72rem; margin-bottom: 0.5rem; }
   .page-title { font-size: 1.85rem; }
   .page-sub { font-size: 0.88rem; line-height: 1.5; margin-top: 0.6rem; }
@@ -836,7 +829,8 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 }
 
 @media (max-width: 767px) {
-  .reviews-hero { height: 40vh !important; min-height: 320px; max-height: 400px; justify-content: flex-start; padding-top: 5rem; }
+  .reviews-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
+  .reviews-hero img { object-position: center 70% !important; }
 }
 
 /* ═══════════════════ RANKING PAGE TEMPLATE ═══════════════════ */
