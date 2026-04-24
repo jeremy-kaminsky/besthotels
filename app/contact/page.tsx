@@ -44,7 +44,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="channel-label">Email</div>
-                <div className="channel-value"><a href="mailto:press@explorebesthotels.com">press@explorebesthotels.com</a></div>
+                <div className="channel-value"><a href="mailto:jeremy@explorebesthotels.com">jeremy@explorebesthotels.com</a></div>
               </div>
             </div>
             <div className="channel">

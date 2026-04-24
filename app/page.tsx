@@ -168,7 +168,7 @@ export default async function HomePage() {
           <p className="section-eyebrow">Leadership</p>
           <blockquote className="about-quote">&quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;</blockquote>
           <p className="about-text">
-            Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication. Jeremy&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.
+            Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication.
           </p>
           <div className="about-sig">
             <div className="about-sig-line" />

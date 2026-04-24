@@ -602,7 +602,7 @@ footer {
 .about-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent 55%, var(--dark-2) 100%); }
 .about-content { background: var(--dark-2); display: flex; flex-direction: column; justify-content: center; padding: 4rem 4rem 4rem 3rem; }
 .about-quote { font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 300; font-style: italic; color: var(--gold-light); line-height: 1.55; margin-bottom: 1.8rem; padding-left: 1.5rem; border-left: 2px solid var(--gold-dark); }
-.about-text { font-size: 0.76rem; line-height: 1.95; color: var(--muted); max-width: 400px; margin-bottom: 2.5rem; }
+.about-text { font-size: 1.125rem; line-height: 1.7; color: var(--muted); max-width: 400px; margin-bottom: 2.5rem; }
 .about-sig { display: flex; align-items: center; gap: 1rem; }
 .about-sig-line { width: 28px; height: 1px; background: var(--gold-dark); }
 .about-sig-name { font-family: var(--serif); font-size: 1.02rem; font-style: italic; color: var(--gold); }
@@ -722,6 +722,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   .stays-grid { grid-template-columns: 1fr; }
   .stay-card { height: 280px; }
 
+  .about-text { font-size: 0.92rem; line-height: 1.75; }
   #about { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; text-align: center; }
   #about .about-content { padding: 0; }
   #about .about-sig { justify-content: center; }
@@ -806,6 +807,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 }
 
 @media (max-width: 767px) {
+  .reviews-hero-img { object-position: 50% 15% !important; }
   .page-hero { height: 45vh !important; min-height: 180px; padding: 1.5rem 1rem; }
   .rankings-hero { height: 40vh !important; min-height: 320px; max-height: 400px; }
   .press-section { padding: 2rem 1.2rem; }

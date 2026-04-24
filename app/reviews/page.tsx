@@ -43,7 +43,8 @@ export default async function ReviewsPage() {
           priority
           quality={90}
           sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center top' }}
+          className="reviews-hero-img"
+          style={{ objectFit: 'cover', objectPosition: '50% 60%' }}
         />
         <div className="page-hero-content">
           <h1 className="page-title fu">Resort &amp; Hotel <em>Reviews</em></h1>

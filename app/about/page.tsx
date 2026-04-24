@@ -80,7 +80,7 @@ export default function AboutPage() {
             &quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;
           </blockquote>
           <div className="founder-bio">
-            <p>Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication. Jeremy&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.</p>
+            <p>Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication.</p>
           </div>
         </div>
       </section>
@@ -95,8 +95,7 @@ export default function AboutPage() {
             &quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;
           </blockquote>
           <div className="founder-bio">
-            <p>Jake has spent the past five years traveling to extraordinary properties across six continents, building one of the most trusted luxury hotel editorial platforms in the world. His work has been featured in Axios, Condé Nast Traveler, and HuffPost.</p>
-            <p>He is based between New York and wherever the next great hotel is.</p>
+            <p>Jake&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.</p>
           </div>
         </div>
         <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
