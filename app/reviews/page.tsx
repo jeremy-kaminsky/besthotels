@@ -46,7 +46,6 @@ export default async function ReviewsPage() {
           style={{ objectFit: 'cover', objectPosition: 'center top' }}
         />
         <div className="page-hero-content">
-          <p className="page-eyebrow fu">Aminess Laurel Khalani · Makarska, Croatia</p>
           <h1 className="page-title fu">Resort &amp; Hotel <em>Reviews</em></h1>
           <p className="page-sub fu">Every property reviewed in person. We stay so you can choose with confidence.</p>
         </div>

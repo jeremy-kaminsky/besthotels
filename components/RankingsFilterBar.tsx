@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
 
 interface Option { slug: string; name: string; countrySlug?: string; regionSlug?: string }
 
@@ -17,6 +18,8 @@ interface Props {
   onRegionChange: (v: string) => void
   onCityChange: (v: string) => void
   onExpChange: (v: string) => void
+  eyebrow?: string
+  heading?: ReactNode
 }
 
 function expToSlug(exp: string) { return exp.toLowerCase().replace(/\s+/g, '-') }
@@ -25,6 +28,8 @@ export default function RankingsFilterBar({
   countries, regions, cities, experienceOptions,
   filterCountry, filterRegion, filterCity, filterExp,
   onCountryChange, onRegionChange, onCityChange, onExpChange,
+  eyebrow = 'Find Your Ranking',
+  heading = <>Filter by <em>Destination &amp; Experience</em></>,
 }: Props) {
   const [openCell, setOpenCell] = useState<string | null>(null)
   const barRef = useRef<HTMLDivElement>(null)
@@ -63,8 +68,8 @@ export default function RankingsFilterBar({
 
   return (
     <section className="filter-section">
-      <div className="filter-eyebrow">Find Your Ranking</div>
-      <h2 className="filter-heading">Filter by <em>Destination &amp; Experience</em></h2>
+      <div className="filter-eyebrow">{eyebrow}</div>
+      <h2 className="filter-heading">{heading}</h2>
 
       <div className="filter-bar" ref={barRef}>
         {(['country', 'region', 'city', 'experience'] as const).map(type => {

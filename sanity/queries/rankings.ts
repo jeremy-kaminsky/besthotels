@@ -45,6 +45,10 @@ export const TOP50_RANKING_QUERY = groq`
   }
 `
 
+export const TOP25_BOUTIQUE_QUERY = groq`
+  *[_type == "hotel" && "Boutique" in experiences] | order(length(featuredIn) desc, name asc) [0...25] { ${HOTEL_FIELDS} }
+`
+
 export const HOTEL_COUNT_BY_COUNTRY_QUERY = groq`
   *[_type == "country"] {
     "slug": slug.current, name,

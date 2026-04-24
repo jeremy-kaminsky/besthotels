@@ -7,7 +7,7 @@ import RankingsClient from './RankingsClient'
 
 export const metadata: Metadata = {
   title: 'Hotel Rankings',
-  description: 'Our definitive editorial rankings — by country, region, city, and experience type.',
+  description: 'Our definitive lists — by country, region, city, and experience.',
 }
 
 export default async function RankingsPage() {
@@ -26,23 +26,20 @@ export default async function RankingsPage() {
 
   return (
     <>
-      <section
-        className="page-hero rankings-hero"
-        style={{ height: '55vh' }}
-      >
+      <section className="page-hero rankings-hero" style={{ height: '55vh' }}>
         <Image
-          src="/images/rankings-hero-platz.jpg"
-          alt="Hotel Platz, South Tyrol Italy"
+          src="/images/reviews-hero-aminess-khalani.jpg"
+          alt="Aminess Laurel Khalani Hotel pool and sea view, Makarska Croatia"
           fill
           priority
           quality={90}
           sizes="100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          style={{ objectFit: 'cover', objectPosition: 'center top' }}
         />
         <div className="page-hero-content">
-          <p className="page-eyebrow fu">Definitive Lists</p>
+          <p className="page-eyebrow fu">Editorial Curation</p>
           <h1 className="page-title fu">Hotel <em>Rankings</em></h1>
-          <p className="page-sub fu">Our definitive editorial rankings — by country, region, city, and experience type.</p>
+          <p className="page-sub fu">Our definitive lists — by country, region, city, and experience.</p>
         </div>
       </section>
 
