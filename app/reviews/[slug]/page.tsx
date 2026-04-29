@@ -6,6 +6,7 @@ import { client } from '@/sanity/client'
 import { REVIEW_BY_SLUG_QUERY, ALL_REVIEWS_QUERY } from '@/sanity/queries/reviews'
 import PortableText from '@/components/PortableText'
 import { urlFor } from '@/sanity/image'
+import { resolveHeroImage } from '@/lib/heroImages'
 
 interface Props {
   params: { slug: string }
@@ -57,7 +58,7 @@ export default async function ReviewPage({ params }: Props) {
 
   if (!review) return notFound()
 
-  const heroUrl = review.heroImageUrl || (review.heroImage ? urlFor(review.heroImage).width(1800).url() : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1800&q=85&auto=format&fit=crop')
+  const heroUrl = resolveHeroImage(review.slug, review.heroImageUrl) || (review.heroImage ? urlFor(review.heroImage).width(1800).url() : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1800&q=85&auto=format&fit=crop')
   const photoStripUrls = review.photoStripUrls || []
   const photoStrip = review.photoStrip || []
   const activeStrip = photoStripUrls.length > 0 ? 'urls' : photoStrip.length > 0 ? 'assets' : null
@@ -152,7 +153,7 @@ export default async function ReviewPage({ params }: Props) {
               <p className="section-label">Related Reviews</p>
               <div className="review-related-grid">
                 {review.relatedReviews.map((r) => {
-                  const img = r.heroImageUrl || (r.heroImage ? urlFor(r.heroImage).width(600).url() : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')
+                  const img = resolveHeroImage(r.slug, r.heroImageUrl) || (r.heroImage ? urlFor(r.heroImage).width(600).url() : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80')
                   return (
                     <Link key={r.slug} href={`/reviews/${r.slug}`} className="review-card" style={{ backgroundImage: `url('${img}')` }}>
                       <div className="review-overlay" />
