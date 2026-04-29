@@ -11,6 +11,7 @@ export const LOCAL_HERO_IMAGES: Record<string, string> = {
   'ritz-carlton-grand-cayman':     '/images/reviews/ritz-carlton-grand-cayman/hero.jpg',
   'four-seasons-anguilla':         '/images/reviews/four-seasons-anguilla/hero.jpg',
   'four-seasons-nevis':            '/images/reviews/four-seasons-nevis/hero.jpg',
+  'w-costa-rica-reserva-conchal':  '/images/reviews/w-costa-rica-reserva-conchal/hero.jpg',
 }
 
 export function resolveHeroImage(slug: string, heroImageUrl?: string): string {
