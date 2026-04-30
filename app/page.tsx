@@ -16,7 +16,7 @@ export default async function HomePage() {
     // Sanity not configured yet — renders with placeholder content
   }
 
-  const featuredReviews = reviews.slice(0, 5)
+  const featuredReviews = reviews.slice(0, 6)
 
   const placeholderCards = [
     { name: 'Hanging Gardens of Bali', loc: 'Ubud · Indonesia', img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1400&q=85&auto=format&fit=crop' },
@@ -24,6 +24,7 @@ export default async function HomePage() {
     { name: 'Gili Lankanfushi', loc: 'Maldives', img: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1400&q=85&auto=format&fit=crop' },
     { name: 'Burj Al Arab', loc: 'Dubai · UAE', img: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1400&q=85&auto=format&fit=crop' },
     { name: 'Monastero Santa Rosa', loc: 'Amalfi Coast · Italy', img: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1400&q=85&auto=format&fit=crop' },
+    { name: 'Amanyara', loc: 'Turks & Caicos', img: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1400&q=85&auto=format&fit=crop' },
   ]
 
   const displayCards = featuredReviews.length > 0

@@ -15,5 +15,8 @@ export const LOCAL_HERO_IMAGES: Record<string, string> = {
 }
 
 export function resolveHeroImage(slug: string, heroImageUrl?: string): string {
-  return LOCAL_HERO_IMAGES[slug] || heroImageUrl || ''
+  if (LOCAL_HERO_IMAGES[slug]) return LOCAL_HERO_IMAGES[slug]
+  // Skip WordPress URLs — explorebesthotels.com blocks external requests with 403
+  if (heroImageUrl && !heroImageUrl.includes('explorebesthotels.com')) return heroImageUrl
+  return ''
 }
