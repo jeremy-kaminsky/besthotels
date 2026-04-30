@@ -734,7 +734,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   /* Circle section stacking */
   .circle-founder-section { grid-template-columns: 1fr !important; padding: 3rem 1.2rem 4rem !important; gap: 2rem !important; }
   .circle-founder-section .founder-content { order: 2; padding: 0 1.2rem !important; }
-  .circle-founder-section .circle-photo-col { order: 1; }
+  .circle-founder-section .circle-photo-col { order: 1; width: 100%; display: flex !important; justify-content: center !important; align-items: center !important; }
 
   /* Reduce founder text sizes on mobile */
   .founder-name { font-size: 1.6rem !important; }
