@@ -68,6 +68,7 @@ export default function RankingsFilterBar({
 
   return (
     <section className="filter-section">
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
       <div className="filter-eyebrow">{eyebrow}</div>
       <h2 className="filter-heading">{heading}</h2>
 
@@ -142,6 +143,7 @@ export default function RankingsFilterBar({
             </div>
           )
         })}
+      </div>
       </div>
     </section>
   )
