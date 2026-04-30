@@ -143,8 +143,7 @@ footer {
 }
 
 /* ═══════════════════ FILTER SYSTEM ═══════════════════ */
-.filter-section { padding: 3rem 0 2rem; background: var(--dark); border-bottom: 1px solid rgba(255,255,255,0.05); }
-.filter-section > div { padding: 0 3rem; }
+.filter-section { padding: 3rem 3rem 2rem; background: var(--dark); border-bottom: 1px solid rgba(255,255,255,0.05); }
 .filter-eyebrow { font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
 .filter-heading { font-family: var(--serif); font-size: clamp(1.8rem, 2.7vw, 2.3rem); font-weight: 300; margin-bottom: 1.8rem; }
 .filter-heading em { font-style: italic; color: var(--gold-light); }
@@ -756,8 +755,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
   .reviews-grid { grid-template-columns: 1fr; gap: 2px; }
   .review-card.featured { grid-column: auto; height: 320px; }
 
-  .filter-section { padding: 2rem 0 1.5rem; }
-  .filter-section > div { padding: 0 1.2rem; }
+  .filter-section { padding: 2rem 1.2rem 1.5rem; }
   .filter-bar { grid-template-columns: 1fr 1fr; }
   .filter-cell:nth-child(2) { border-right: none; }
   .filter-cell:nth-child(1), .filter-cell:nth-child(2) { border-bottom: 1px solid rgba(201,169,110,0.12); }
