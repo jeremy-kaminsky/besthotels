@@ -114,7 +114,7 @@ footer {
 .review-card:hover { transform: scale(1.02); z-index: 2; }
 .review-card:hover .review-info { opacity: 1; transform: translateY(0); }
 .review-card:hover .review-score { opacity: 1; }
-.review-card.featured { grid-column: span 2; aspect-ratio: unset; height: 480px; }
+.review-card.featured { grid-column: span 2; aspect-ratio: 3/2; height: unset; }
 .review-card.featured .review-name { font-size: 2rem; }
 .review-card.featured .review-excerpt { -webkit-line-clamp: 3; }
 
