@@ -36,7 +36,7 @@ export default function AboutPage() {
         </div>
         <div
           className="mission-photo"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=85&auto=format&fit=crop')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1400&q=85&auto=format&fit=crop')" }}
         />
       </section>
 
