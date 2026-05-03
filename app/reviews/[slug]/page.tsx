@@ -8,6 +8,10 @@ import PortableText from '@/components/PortableText'
 import { urlFor } from '@/sanity/image'
 import { resolveHeroImage } from '@/lib/heroImages'
 
+const LOCAL_AUTHOR_PHOTOS: Record<string, string> = {
+  'Andrea Persia': '/images/andrea-persia.jpg',
+}
+
 interface Props {
   params: { slug: string }
 }
@@ -83,7 +87,9 @@ export default async function ReviewPage({ params }: Props) {
           {review.locationLabel && <div className="hero-location">{review.locationLabel}</div>}
           <div className="hero-meta">
             <div className="author-block">
-              {review.authorPhoto ? (
+              {LOCAL_AUTHOR_PHOTOS[review.authorName || ''] ? (
+                <img className="author-avatar" src={LOCAL_AUTHOR_PHOTOS[review.authorName!]} alt={review.authorName || ''} style={{ objectFit: 'cover' }} />
+              ) : review.authorPhoto ? (
                 <img className="author-avatar" src={urlFor(review.authorPhoto).width(84).height(84).url()} alt={review.authorName || ''} />
               ) : (
                 <div className="author-avatar" style={{ background: 'rgba(201,169,110,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
