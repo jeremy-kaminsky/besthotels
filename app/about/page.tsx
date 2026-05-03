@@ -80,7 +80,7 @@ export default function AboutPage() {
             &quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;
           </blockquote>
           <div className="founder-bio">
-            <p>Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication.</p>
+            <p>Jeremy Kaminsky is the Owner and President of Best Hotels. Under his leadership, the platform has evolved into a full editorial publication — one defined by firsthand stays, curated reviews, and the most authoritative ranking of luxury hotels in the world.</p>
           </div>
         </div>
       </section>

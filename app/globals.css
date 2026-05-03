@@ -640,7 +640,7 @@ footer {
 .founder-name { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.15; margin-bottom: 0.4rem; }
 .founder-title { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; }
 .founder-quote { font-family: var(--serif); font-size: clamp(1.1rem, 1.6vw, 1.35rem); font-style: italic; color: var(--gold-light); line-height: 1.6; padding-left: 1.5rem; border-left: 2px solid var(--gold-dark); margin-bottom: 2rem; }
-.founder-bio { font-size: 0.9rem; line-height: 1.95; color: var(--muted); max-width: 420px; }
+.founder-bio { font-size: 0.9rem; line-height: 1.95; color: var(--muted); }
 .founder-bio p + p { margin-top: 1rem; }
 .founder--inverted .founder-photo { order: 2; }
 .founder--inverted .founder-content { order: 1; }
