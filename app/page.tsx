@@ -43,7 +43,7 @@ export default async function HomePage() {
           </p>
           <div className="hero-meta-row fu">
             <div className="hero-meta-item">
-              <div className="hero-meta-num">200<span style={{ fontSize: '0.9rem' }}>+</span></div>
+              <div className="hero-meta-num">100<span style={{ fontSize: '0.9rem' }}>+</span></div>
               <div className="hero-meta-label">Hotels Reviewed</div>
             </div>
             <div className="hero-meta-divider" />
