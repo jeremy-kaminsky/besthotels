@@ -101,8 +101,8 @@ export default function AboutPage() {
         <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
-            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
-              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 15%', transform: 'scale(1.2)', transformOrigin: 'center 30%' }} />
+            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0, backgroundColor: '#0a0a0a' }}>
+              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'contain', objectPosition: 'center 20%' }} />
             </div>
           </div>
         </div>
