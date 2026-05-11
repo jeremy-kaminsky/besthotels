@@ -68,7 +68,7 @@ export default function RankingsFilterBar({
 
   return (
     <section className="filter-section">
-      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+      <div className="rankings-index-wrap" style={{ paddingTop: '0', paddingBottom: '0' }}>
       <div className="filter-eyebrow">{eyebrow}</div>
       <h2 className="filter-heading">{heading}</h2>
 
