@@ -28,8 +28,8 @@ export default async function RankingsPage() {
     <>
       <section className="page-hero rankings-hero" style={{ height: '55vh' }}>
         <Image
-          src="/images/reviews-hero-aminess-khalani.jpg"
-          alt="Aminess Laurel Khalani Hotel pool and sea view, Makarska Croatia"
+          src="/images/rankings-hero.jpg"
+          alt="Hotel Platz"
           fill
           priority
           quality={90}
