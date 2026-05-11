@@ -89,7 +89,7 @@ export default async function ReviewPage({ params }: Props) {
           <div className="hero-meta">
             <div className="author-block">
               {LOCAL_AUTHOR_PHOTOS[review.authorName || ''] ? (
-                <img className="author-avatar" src={LOCAL_AUTHOR_PHOTOS[review.authorName!]} alt={review.authorName || ''} style={{ objectFit: 'cover' }} />
+                <img className="author-avatar" src={LOCAL_AUTHOR_PHOTOS[review.authorName!]} alt={review.authorName || ''} style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.1)', transformOrigin: 'center 30%' }} />
               ) : review.authorPhoto ? (
                 <img className="author-avatar" src={urlFor(review.authorPhoto).width(84).height(84).url()} alt={review.authorName || ''} />
               ) : (
