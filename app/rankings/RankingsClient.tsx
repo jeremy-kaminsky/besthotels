@@ -120,7 +120,8 @@ export default function RankingsClient({ countries, regions, cities, hotels }: P
           </div>
           <div className="rankings-exp-grid">
             {EXPERIENCE_OPTIONS.map(exp => (
-              <Link key={exp} href={`/rankings/experience/${expToSlug(exp)}`} className="rankings-exp-card">
+              <Link key={exp} href={`/rankings/experience/${expToSlug(exp)}`} className="rankings-exp-card" style={{ backgroundImage: `url(/images/categories/${expToSlug(exp)}.jpg)` }}>
+                <div className="rankings-exp-card-overlay" />
                 <span className="rankings-exp-name">{exp}</span>
                 <span className="rankings-exp-link">→ View ranking</span>
               </Link>
