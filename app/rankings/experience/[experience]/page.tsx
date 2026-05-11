@@ -50,6 +50,7 @@ export default async function ExperienceRankingPage({ params }: { params: { expe
       subtitle={`The world's finest ${exp.toLowerCase()} properties, selected by our editorial team.`}
       hotels={hotels}
       rankingSlug={rankingSlug}
+      heroImage={`/images/categories/${params.experience}.jpg`}
     />
   )
 }

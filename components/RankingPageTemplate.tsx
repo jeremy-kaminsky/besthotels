@@ -19,13 +19,14 @@ interface Props {
   subtitle: string
   hotels: RankingHotel[]
   rankingSlug: string
+  heroImage?: string
 }
 
 function expToSlug(exp: string) {
   return exp.toLowerCase().replace(/\s+/g, '-')
 }
 
-export default function RankingPageTemplate({ eyebrow, title, subtitle, hotels, rankingSlug }: Props) {
+export default function RankingPageTemplate({ eyebrow, title, subtitle, hotels, rankingSlug, heroImage }: Props) {
   if (hotels.length === 0) {
     return (
       <div style={{ padding: '8rem 3rem', textAlign: 'center' }}>
@@ -44,8 +45,14 @@ export default function RankingPageTemplate({ eyebrow, title, subtitle, hotels, 
       {/* HERO */}
       <section
         className="page-hero"
-        style={{ height: '55vh', background: 'linear-gradient(160deg, var(--dark-2) 0%, var(--dark) 100%)' }}
+        style={{
+          height: '55vh',
+          ...(heroImage
+            ? { backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+            : { background: 'linear-gradient(160deg, var(--dark-2) 0%, var(--dark) 100%)' }),
+        }}
       >
+        {heroImage && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%)' }} />}
         <div className="page-hero-content">
           <p className="page-eyebrow">{eyebrow}</p>
           <h1 className="page-title">{title.split(' ').slice(0, -1).join(' ')} <em>{title.split(' ').slice(-1)}</em></h1>
