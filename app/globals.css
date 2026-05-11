@@ -915,7 +915,7 @@ textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 .rankings-section-title { font-family: var(--serif); font-size: clamp(1.6rem, 2.2vw, 2rem); font-weight: 300; }
 .rankings-section-title em { font-style: italic; color: var(--gold-light); }
 .rankings-exp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1200px; }
-.rankings-exp-card { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(201,169,110,0.18); background: var(--dark); background-size: cover; background-position: center; position: relative; overflow: hidden; transition: transform 0.2s; cursor: pointer; }
+.rankings-exp-card { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.2rem 1.4rem; border: none; background: var(--dark); background-size: cover; background-position: center; position: relative; overflow: hidden; transition: transform 0.2s; cursor: pointer; }
 .rankings-exp-card:hover { transform: scale(1.02); }
 .rankings-exp-card:hover .rankings-exp-overlay { opacity: 0.55; }
 .rankings-exp-card-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none; transition: opacity 0.2s; }
