@@ -124,6 +124,7 @@ export default function FilterBar({ countries, states, cities, experiences }: Fi
 
   return (
     <section className="filter-section">
+      <div className="rankings-index-wrap" style={{ paddingTop: '0', paddingBottom: '0' }}>
       <div className="filter-eyebrow">Find Your Stay</div>
       <h2 className="filter-heading">Filter by <em>Destination &amp; Experience</em></h2>
 
@@ -231,6 +232,7 @@ export default function FilterBar({ countries, states, cities, experiences }: Fi
           <button className="filter-clear" onClick={clearAll}>Clear all</button>
         </div>
       )}
+      </div>
     </section>
   )
 }
