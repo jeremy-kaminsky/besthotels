@@ -10,6 +10,7 @@ import { resolveHeroImage } from '@/lib/heroImages'
 
 const LOCAL_AUTHOR_PHOTOS: Record<string, string> = {
   'Andrea Persia': '/images/andrea-persia.jpg',
+  'Jake Trerotola': '/images/jake-trerotola.png',
 }
 
 interface Props {
