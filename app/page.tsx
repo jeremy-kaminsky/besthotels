@@ -130,52 +130,57 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* ABOUT — FIX 2C: dark-2 background for visual contrast */}
+      {/* ABOUT — two-person side-by-side */}
       <section id="about" style={{
-        display: 'grid',
-        gridTemplateColumns: '380px 1fr',
-        gap: '4rem',
-        padding: '5rem 3rem',
-        alignItems: 'center',
         background: 'var(--dark-2)',
         borderTop: '1px solid rgba(201,169,110,0.08)',
+        padding: '5rem 3rem',
       }}>
-        {/* Circle photo column */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            {/* Outer concentric ring */}
-            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
-            {/* Photo with gold ring */}
-            <div className="circle-photo" style={{
-              width: 340, height: 340,
-              borderRadius: '50%',
-              border: '1px solid rgba(201,169,110,0.25)',
-              overflow: 'hidden',
-              position: 'relative',
-              flexShrink: 0,
-            }}>
-              <Image
-                src="/images/jeremy-kaminsky.png"
-                alt="Jeremy Kaminsky"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
-              />
+        <p className="section-eyebrow" style={{ textAlign: 'center', marginBottom: '3rem' }}>Leadership</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', maxWidth: 1100, margin: '0 auto' }}>
+          {/* Jeremy */}
+          <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '2.5rem', alignItems: 'center', paddingRight: '3rem', borderRight: '1px solid rgba(201,169,110,0.08)' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="circle-outer-ring" style={{ position: 'relative', width: 200, height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
+                <div className="circle-photo" style={{ width: 160, height: 160, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
+                  <Image src="/images/jeremy-kaminsky.png" alt="Jeremy Kaminsky" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
+                </div>
+              </div>
+            </div>
+            <div className="about-content">
+              <blockquote className="about-quote">&quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;</blockquote>
+              <p className="about-text">Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication.</p>
+              <div className="about-sig">
+                <div className="about-sig-line" />
+                <div>
+                  <div className="about-sig-name">Jeremy Kaminsky</div>
+                  <div className="about-sig-role">Owner &amp; President, Best Hotels</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content column */}
-        <div className="about-content">
-          <p className="section-eyebrow">Leadership</p>
-          <blockquote className="about-quote">&quot;Best Hotels represents the highest standard in luxury hospitality coverage. We don&apos;t just review properties — we tell their stories the way they deserve to be told.&quot;</blockquote>
-          <p className="about-text">
-            Jeremy Kaminsky is the Owner and President of Best Hotels, acquired with a vision to expand its editorial footprint into the world&apos;s most prestigious luxury hospitality publication.
-          </p>
-          <div className="about-sig">
-            <div className="about-sig-line" />
-            <div>
-              <div className="about-sig-name">Jeremy Kaminsky</div>
-              <div className="about-sig-role">Owner &amp; President, Best Hotels</div>
+          {/* Jake */}
+          <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '2.5rem', alignItems: 'center', paddingLeft: '3rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="circle-outer-ring" style={{ position: 'relative', width: 200, height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
+                <div className="circle-photo" style={{ width: 160, height: 160, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0, backgroundColor: '#fff' }}>
+                  <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.1)', transformOrigin: 'center 30%' }} />
+                </div>
+              </div>
+            </div>
+            <div className="about-content">
+              <blockquote className="about-quote">&quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;</blockquote>
+              <p className="about-text">Jake Trerotola is the Founder and Creative Director of Best Hotels, bringing a background in luxury real estate media and outdoor lifestyle publishing with an audience of over 700K.</p>
+              <div className="about-sig">
+                <div className="about-sig-line" />
+                <div>
+                  <div className="about-sig-name">Jake Trerotola</div>
+                  <div className="about-sig-role">Founder &amp; Creative Director, Best Hotels</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
