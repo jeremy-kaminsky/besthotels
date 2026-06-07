@@ -164,17 +164,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT — Jake, text left / image right */}
+      {/* ABOUT — Jake, image right via order */}
       <section style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 380px',
+        gridTemplateColumns: '380px 1fr',
         gap: '4rem',
         padding: '5rem 3rem',
         alignItems: 'center',
         background: 'var(--dark-2)',
         borderTop: '1px solid rgba(255,255,255,0.05)',
       }}>
-        <div className="about-content">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', order: 2 }}>
+          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
+            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0, backgroundColor: '#ffffff' }}>
+              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.1)', transformOrigin: 'center 30%' }} />
+            </div>
+          </div>
+        </div>
+        <div className="about-content" style={{ order: 1 }}>
           <p className="section-eyebrow">Founder &amp; Creative Director</p>
           <blockquote className="about-quote">&quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;</blockquote>
           <p className="about-text">
@@ -185,14 +193,6 @@ export default async function HomePage() {
             <div>
               <div className="about-sig-name">Jake Trerotola</div>
               <div className="about-sig-role">Founder &amp; Creative Director, Best Hotels</div>
-            </div>
-          </div>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.06)' }} />
-            <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(201,169,110,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0, backgroundColor: '#ffffff' }}>
-              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.1)', transformOrigin: 'center 30%' }} />
             </div>
           </div>
         </div>
