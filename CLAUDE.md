@@ -17,9 +17,10 @@ Best Hotels (explorebesthotels.com) is a luxury hotel editorial review and ranki
 - **GitHub repo:** jeremy-kaminsky/besthotels
 
 ## Design System
-- **Fonts:** Cormorant Garamond (serif), Montserrat (sans-serif)
+- **Fonts:** Playfair Display (serif), Inter (sans-serif)
 - **Aesthetic:** Dark luxury
-- **Gold accent:** #C9A96E
+- **Gold accent:** #B8A082
+- **Body text:** #EDE8E0
 - **Background:** Near black (#0a0a0a)
 
 ## Site Structure
