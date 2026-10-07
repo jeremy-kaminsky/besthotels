@@ -214,7 +214,7 @@ export default async function HomePage() {
           <div className="circle-outer-ring" style={{ position: 'relative', width: 440, height: 440, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
             <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', border: '1px solid rgba(184,160,130,0.06)' }} />
             <div className="circle-photo" style={{ width: 340, height: 340, borderRadius: '50%', border: '1px solid rgba(184,160,130,0.25)', overflow: 'hidden', position: 'relative', flexShrink: 0, backgroundColor: '#ffffff' }}>
-              <Image src="/images/jake-trerotola.png" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 20%', transform: 'scale(1.1)', transformOrigin: 'center 30%' }} />
+              <Image src="/images/jake-trerotola-new.jpg" alt="Jake Trerotola" fill style={{ objectFit: 'cover', objectPosition: 'center 50%', transform: 'scale(1.5)', transformOrigin: 'center' }} />
             </div>
           </div>
         </div>
