@@ -95,7 +95,8 @@ export default function AboutPage() {
             &quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;
           </blockquote>
           <div className="founder-bio">
-            <p>Jake&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.</p>
+            <p>Jake&apos;s background spans luxury real estate investing, media, and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K followers across accounts including @BestHotels @LuxuryRealEstate and @GoneOutdoors.</p>
+            <p>He has also built a diverse real estate investment portfolio spanning multiple property types and investment strategies.</p>
           </div>
         </div>
         <div className="circle-photo-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

@@ -199,9 +199,10 @@ export default async function HomePage() {
         <div className="about-content">
           <p className="section-eyebrow">Founder &amp; Creative Director</p>
           <blockquote className="about-quote">&quot;I started Best Hotels because I genuinely believe the world&apos;s best hotels are underrepresented in editorial media. We fix that.&quot;</blockquote>
-          <p className="about-text">
-            Jake&apos;s background spans luxury real estate media and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K across accounts including @LuxuryRealEstate and @GoneOutdoors.
-          </p>
+          <div className="about-text">
+            <p>Jake&apos;s background spans luxury real estate investing, media, and outdoor lifestyle publishing, where he&apos;s built an audience of over 700K followers across accounts including @BestHotels @LuxuryRealEstate and @GoneOutdoors.</p>
+            <p style={{ marginTop: '1rem' }}>He has also built a diverse real estate investment portfolio spanning multiple property types and investment strategies.</p>
+          </div>
           <div className="about-sig">
             <div className="about-sig-line" />
             <div>
